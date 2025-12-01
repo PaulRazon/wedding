@@ -38,8 +38,8 @@ export default function MobileBottomNav() {
   };
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-wedding-light-card/95 dark:bg-wedding-dark-card/95 
-                   backdrop-blur-lg border-t border-wedding-light-border dark:border-wedding-dark-border shadow-lg">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#eae4cc]
+                   shadow-lg">
       <div className="flex items-center justify-around py-2">
         {navItems.map((item) => {
           const Icon = item.icon;
