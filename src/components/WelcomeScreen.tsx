@@ -163,7 +163,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
               onClick={handleOpenInvitation}
               disabled={isOpening}
               className={`group bg-white relative overflow-hidden 
-                       text-gray-800 px-10 py-4 rounded-full habibi-regular font-bold text-xl
+                       text-gray-800 px-10 py-4 rounded-full habibi-regular font-bold  text-xs md:text-sm
                        transition-all duration-500 transform hover:scale-105 shadow-xl
                        border-2 border-gray-300 hover:border-gray-400
                        ${isOpening ? 'animate-pulse cursor-not-allowed' : 'hover:shadow-2xl'}`}
@@ -176,7 +176,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
                   </>
                 ) : (
                   <>
-                    <Lock className="h-6 w-6 group-hover:animate-bounce" />
+                    <Lock className="h-6 w-6 group-hover:animate-bounce " />
                     ¡CORAZÓN PALPITANTE, MANOS TEMBLOROSAS, ¡TOCA AQUÍ!
                   </>
                 )}
