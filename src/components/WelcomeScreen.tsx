@@ -177,7 +177,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
                 ) : (
                   <>
                     <Lock className="h-6 w-6 group-hover:animate-bounce" />
-                    Bienvenido(a)
+                    Bienvenidos, toca aquí
                   </>
                 )}
               </span>
