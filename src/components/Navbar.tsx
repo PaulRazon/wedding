@@ -44,7 +44,7 @@ export default function Navbar({ isMusicPlaying, toggleMusic }: Omit<NavbarProps
           {/* Logo */}
           <div className="flex items-center group">
             <Heart className="h-6 w-6 text-wedding-warm transition-all duration-300 group-hover:scale-110" />
-            <span className="ml-3 text-xl font-medium text-wedding-light-text dark:text-wedding-dark-text pinyon-script-regular tracking-wide">
+            <span className="ml-3 text-2xl font-medium text-wedding-light-text dark:text-wedding-dark-text pinyon-script-regular tracking-wide">
               Anahí & Eduardo
             </span>
           </div>

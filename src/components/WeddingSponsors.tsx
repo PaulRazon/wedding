@@ -113,9 +113,7 @@ export default function WeddingSponsors() {
       className="py-16 px-4 bg-[#eae4cc] relative"
     >
       <div className="max-w-6xl mx-auto">
-        <div className={`text-center mb-12 transition-all duration-1000 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'
-        }`}>
+        <div className={`text-center mb-12 transition-all duration-1000 animate-fade-in-up opacity-100`}>
           <div className="flex items-center justify-center mb-6">
             <Heart className="h-4 w-4 text-wedding-warm mr-3" />
             <div className="w-12 h-px bg-wedding-warm"></div>
@@ -131,9 +129,7 @@ export default function WeddingSponsors() {
           </p>
         </div>
 
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
-          isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'
-        }`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 animate-fade-in-up opacity-100`}>
           {sponsors.map((sponsor) => (
             <div 
               key={sponsor.id}
