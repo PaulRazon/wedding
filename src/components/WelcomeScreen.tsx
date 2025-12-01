@@ -113,12 +113,15 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
     <div className="fixed inset-0 z-50 flex h-screen items-center justify-center overflow-hidden relative">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-contain bg-[#fbfdff] bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/welcome-image.png)' }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: 'url(/resource-photo-3.jpg)',
+          filter: 'brightness(0.7)'
+        }}
       ></div>
       
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 "></div>
+      {/* Darker overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
 
       {/* Floating Hearts */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -138,8 +141,23 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
       </div>
 
       {/* Main Content */}
-       {/* Content Card with backdrop */}
-        <div className=" rounded-3xl bg-transparent mb-40 md:mb-18 p-8 md:p-12 shadow-2xl h-screen flex flex-col justify-end">
+      <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
+        {/* Wedding Title */}
+        <div className="mb-12 text-center">
+          <h1 className="great-vibes-regular text-5xl md:text-6xl text-white mb-4">
+            Anahí & Eduardo
+          </h1>
+          <div className="w-24 h-1 bg-white/60 mx-auto mb-4"></div>
+          <p className="habibi-regular text-white/90 text-xl">
+            Nos casamos
+          </p>
+          <p className="habibi-regular text-white/80 mt-2">
+            11 de Abril, 2026
+          </p>
+        </div>
+        
+        {/* Content Card with backdrop */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl w-full max-w-lg">
          
             <button
               onClick={handleOpenInvitation}
@@ -159,7 +177,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
                 ) : (
                   <>
                     <Lock className="h-6 w-6 group-hover:animate-bounce" />
-                    Abrir Invitación
+                    Bienvenido(a)
                   </>
                 )}
               </span>
@@ -168,7 +186,9 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
               <div className="absolute inset-0 bg-gradient-to-r from-wedding-secondary to-wedding-rose 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </button>
+          </div>
+        </div>
       </div>
-    </div>
+      
   );
 }
