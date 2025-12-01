@@ -80,7 +80,7 @@ export default function PhotoSection({
                 <div className="mb-8">
                   <Quote className={`h-8 w-8 text-wedding-warm mb-4 ${reverse ? 'ml-auto' : ''}`} />
                   <blockquote className="habibi-regular text-lg md:text-xl text-wedding-light-text dark:text-wedding-dark-text leading-relaxed italic">
-                    "{quote}"
+                    &ldquo;{quote}&rdquo;
                   </blockquote>
                   {author && (
                     <cite className="habibi-regular text-sm text-wedding-light-muted dark:text-wedding-dark-muted mt-4 block not-italic">

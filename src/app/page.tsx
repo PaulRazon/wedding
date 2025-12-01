@@ -14,6 +14,8 @@ import Footer from '@/components/Footer';
 import MobileBottomNav from '@/components/MobileBottomNav';
 import PhotoSection from '@/components/PhotoSection';
 import LoveStoryCard from '@/components/LoveStoryCard';
+import ReceptionDetails from '@/components/ReceptionDetails';
+import WeddingSponsors from '@/components/WeddingSponsors';
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -117,8 +119,13 @@ export default function Home() {
         <RSVP />
 
         {/* Footer */}
+        {/* Reception Details */}
+        <WeddingSponsors />
+
+
         <Footer />
 
+        
         {/* Mobile Bottom Navigation */}
         <MobileBottomNav />
       </div>

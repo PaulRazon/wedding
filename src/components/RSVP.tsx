@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { MessageCircle, Send, User, Users, UserX, Heart, Sparkles, Mail } from 'lucide-react';
 import HedgehogDecoration from './HedgehogDecoration';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { Button } from './ui/button';
 
 export default function RSVP() {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,10 +65,10 @@ Detalles del evento:
     window.open(whatsappUrl, '_blank');
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: string, field: string) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [field]: e
     });
   };
 
@@ -114,7 +116,7 @@ Detalles del evento:
                 id="name"
                 name="name"
                 value={formData.name}
-                onChange={handleInputChange}
+                onChange={(e)=>handleInputChange(e.target.value, 'name')}
                 required
                 className="w-full px-4 py-3 rounded-lg border border-wedding-light-border dark:border-wedding-dark-border 
                          bg-wedding-light-card dark:bg-wedding-dark-card text-wedding-light-text dark:text-wedding-dark-text
@@ -129,22 +131,21 @@ Detalles del evento:
               <label htmlFor="attendance" className="block habibi-regular text-base font-medium text-wedding-light-text dark:text-wedding-dark-text mb-2">
                 Confirmación de asistencia *
               </label>
-              <select
-                id="attendance"
+              <Select
                 name="attendance"
                 value={formData.attendance}
-                onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-wedding-light-border dark:border-wedding-dark-border 
-                         bg-wedding-light-card dark:bg-wedding-dark-card text-wedding-light-text dark:text-wedding-dark-text
-                         focus:ring-2 focus:ring-wedding-warm focus:border-transparent transition-all duration-300
-                         habibi-regular text-base"
+                onValueChange={(value)=>handleInputChange(value, 'attendance')}
               >
-                <option value="">Selecciona una opción</option>
-                <option value="solo">Asistiré solo/a</option>
-                <option value="acompanante">Asistiré con acompañante</option>
-                <option value="no">No podré asistir</option>
-              </select>
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecciona una opción"/>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="solo">Asistiré solo/a</SelectItem>
+                  <SelectItem value="acompanante">Asistiré con acompañante</SelectItem>
+                  <SelectItem value="no">No podré asistir</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
 
             {/* Message Input */}
@@ -156,7 +157,7 @@ Detalles del evento:
                 id="message"
                 name="message"
                 value={formData.message}
-                onChange={handleInputChange}
+                onChange={(e)=>handleInputChange(e.target.value, 'message')}
                 rows={4}
                 className="w-full px-4 py-3 rounded-lg border border-wedding-light-border dark:border-wedding-dark-border 
                          bg-wedding-light-card dark:bg-wedding-dark-card text-wedding-light-text dark:text-wedding-dark-text
@@ -168,16 +169,16 @@ Detalles del evento:
 
             {/* Submit Button */}
             <div className="text-center pt-4">
-              <button
+              <Button
+                variant="default"
                 type="submit"
-                className="inline-flex items-center gap-3 bg-wedding-warm hover:bg-wedding-neutral text-white 
-                         px-8 py-3 rounded-lg habibi-regular font-medium text-base transition-all duration-300
-                         border border-wedding-warm hover:border-wedding-neutral transform hover:scale-105"
+                size="lg"
+                className="inline-flex items-center gap-3"
               >
                 <MessageCircle className="h-5 w-5" />
                 Enviar por WhatsApp
                 <Send className="h-4 w-4" />
-              </button>
+              </Button>
             </div>
 
             {/* Info Text */}

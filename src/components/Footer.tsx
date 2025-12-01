@@ -4,7 +4,7 @@ import { Heart, Calendar, MapPin, Sparkles } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#eae4cc] border-t border-wedding-light-border dark:border-wedding-dark-border mb-20 md:mb-0">
+    <footer className="border-t border-wedding-light-border dark:border-wedding-dark-border mb-20 md:mb-0">
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center space-y-8">
           {/* Main Content */}
