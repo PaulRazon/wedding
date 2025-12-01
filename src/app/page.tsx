@@ -16,6 +16,7 @@ import PhotoSection from '@/components/PhotoSection';
 import LoveStoryCard from '@/components/LoveStoryCard';
 import ReceptionDetails from '@/components/ReceptionDetails';
 import WeddingSponsors from '@/components/WeddingSponsors';
+import GiftsSection from '@/components/GiftsSection';
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -104,6 +105,7 @@ export default function Home() {
         {/* Dress Code Section */}
         <DressCode />
 
+        
         {/* Gallery Section */}
         <Gallery />
 
@@ -123,6 +125,7 @@ export default function Home() {
         <WeddingSponsors />
 
 
+<GiftsSection />
         <Footer />
 
         
