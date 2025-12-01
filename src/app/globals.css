@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FEFCFA;
+  --foreground: #4A3728;
+  --card: #F9F6F1;
+  --muted: #8B7355;
+  --border: #E8DDD4;
+  --primary: #F5F1EB;
+  --secondary: #E8DDD4;
+  --accent: #D4C4B0;
+  --warm: #C7B299;
+  --neutral: #A69080;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+body {
+ /* background: var(--background);
+  color: var(--foreground); */
+  font-family: var(--font-cormorant), serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom animations for wedding theme */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* Safe area for mobile devices */
+.h-safe-area-inset-bottom {
+  height: env(safe-area-inset-bottom);
+}
+
+/* Ensure content doesn't get hidden behind mobile bottom nav */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 510;
+  font-style: oblique;
+}
+
+
+.pinyon-script-regular {
+  font-family: var(--font-pinyon-script), cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.great-vibes-bold {
+  font-family: "Great Vibes", cursive;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.habibi-regular {
+  font-family: "Habibi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.habibi-bold {
+  font-family: "Habibi", serif;
+  font-weight: bold;
+  font-style: normal;
 }
