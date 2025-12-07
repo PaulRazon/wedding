@@ -137,7 +137,6 @@ export default function OurStory() {
             {/* Decorative Divider */}
             <div className="flex items-center justify-center mb-14 relative z-10">
               <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#e8b4a0]"></div>
-              <BellRing className="h-7 w-7 mx-6 text-[#e8b4a0] animate-pulse drop-shadow-lg" />
               <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#e8b4a0]"></div>
             </div>
 
