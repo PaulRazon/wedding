@@ -66,7 +66,7 @@ export default function Home() {
       >
         {/* Background Music */}
         <audio ref={audioRef} loop>
-          <source src="/wedding-play.mpeg" type="audio/mpeg" />
+          <source src="/song.mp4" type="audio/mpeg" />
         </audio>
 
         {/* Navigation */}
@@ -82,7 +82,8 @@ export default function Home() {
         {/* Photo Section 1 */}
         <PhotoSection
           imageUrl="/save-date.jpg"
-          quote="Estamos muy felices de dar este paso en nuestra vida y hoy queremos compartir nuestra alegría junto a ustedes. Por eso hemos elegido a las personas más cercanas en nuestra vida, ¡sería un gusto tenerte en nuestro gran día!"
+          title="Queridas Almas Luminosas"
+          quote="Estamos muy felices de dar este paso en nuestra vida y hoy queremos compartir nuestra alegría junto a ustedes. Por eso hemos elegido a las personas más cercanas en nuestra vida, ¡sería un gusto tenerte en un día tan significativo para nosotros!"
           reverse={false}
         />
 

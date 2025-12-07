@@ -59,7 +59,7 @@ export default function Hero() {
         {/* Subtitle */}
         <div className={`transition-all duration-1500 delay-300 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
           <p className="habibi-regular text-lg md:text-xl font-light mb-8 text-white/90 tracking-wide drop-shadow-lg">
-            Nuestra Boda
+            NUESTRA BODA
           </p>
         </div>
 

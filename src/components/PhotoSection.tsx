@@ -10,11 +10,13 @@ interface PhotoSectionProps {
   coupleNames?: string;
   date?: string;
   reverse?: boolean;
+  title?: string;
 }
 
 export default function PhotoSection({ 
   imageUrl, 
   quote, 
+  title,
   author, 
   coupleNames = "Anahí & Eduardo",
   date = "11 de Abril, 2026",
@@ -69,10 +71,12 @@ export default function PhotoSection({
       </div>
 
       {/* Desktop: Imagen con mensaje */}
-      <div className="hidden md:block">
-        <div className={`flex items-center min-h-[500px] ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
+      <section className="hidden md:block">
+        <article className={`flex items-center min-h-[500px] ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
           {/* Texto */}
-          <div className={`w-1/2 px-8 lg:px-16 ${reverse ? 'text-right' : 'text-left'}`}>
+          <header className='flex w-1/2 flex-col'>
+            <h1 className="text-5xl font-medium mb-4 ml-11">{title}</h1>
+            <div className={`w-full px-8 lg:px-16 ${reverse ? 'text-right' : 'text-left'}`}>
             <div className={`transition-all duration-1000 ${
               isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'
             }`}>
@@ -105,6 +109,9 @@ export default function PhotoSection({
               </div>
             </div>
           </div>
+          </header>
+          
+          
 
           {/* Imagen */}
           <div className="w-1/2 relative">
@@ -133,8 +140,8 @@ export default function PhotoSection({
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
     </section>
   );
 }
