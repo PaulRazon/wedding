@@ -21,71 +21,64 @@ export default function WeddingSponsors() {
       id: 1,
       name: 'Padrinos de Anillo',
       role: 'Anillos',
-      image: '/placeholder-couple.jpg',
+      image: '/anillos.jpeg',
       description: 'Con su bendición, nuestros anillos simbolizan el amor eterno.'
     },
     {
       id: 2,
       name: 'Padrinos de Lazo',
       role: 'Lazo',
-      image: '/placeholder-couple.jpg',
+      image: '/lazo.jpeg',
       description: 'Su guía nos une en este lazo sagrado de amor y compromiso.'
     },
     {
       id: 3,
       name: 'Padrinos de Arras',
       role: 'Arras',
-      image: '/placeholder-couple.jpg',
+      image: '/arras.jpeg',
       description: 'Su generosidad es el fundamento de nuestro nuevo hogar.'
     },
     {
       id: 4,
       name: 'Padrinos de Ramo',
       role: 'Ramo',
-      image: '/placeholder-couple.jpg',
+      image: '/ramo.jpeg',
       description: 'Su amor florece en cada pétalo de nuestro ramo nupcial.'
     },
     {
       id: 5,
       name: 'Padrinos de Biblia',
       role: 'Biblia',
-      image: '/placeholder-couple.jpg',
+      image: '/biblia.jpeg',
       description: 'Su fe nos guía en este camino de bendición.'
     },
     {
       id: 6,
       name: 'Padrinos de Cojines',
       role: 'Cojines',
-      image: '/placeholder-couple.jpg',
+      image: '/cojines.jpeg',
       description: 'Su apoyo es el soporte de nuestra unión.'
     },
     {
       id: 7,
-      name: 'Padrinos de Vino',
-      role: 'Vino',
-      image: '/placeholder-couple.jpg',
+      name: 'Padrinos de Musica',
+      role: 'Musica',
+      image: '/musica.jpeg',
       description: 'Que su alegría sea el vino que celebre nuestro amor.'
     },
     {
       id: 8,
-      name: 'Padrinos de Recuerdos',
-      role: 'Recuerdos',
-      image: '/placeholder-couple.jpg',
+      name: 'Padrinos de Brindis',
+      role: 'Brindis',
+      image: '/brindis.jpeg',
       description: 'Su cariño será recordado en cada detalle.'
     },
     {
       id: 9,
-      name: 'Padrinos de Pastel',
-      role: 'Pastel',
-      image: '/placeholder-couple.jpg',
-      description: 'Dulzura y bendición en cada rebanada.'
-    },
-    {
-      id: 10,
-      name: 'Invitados Especiales',
-      role: 'Especiales',
-      image: '/placeholder-couple.jpg',
-      description: 'Su presencia hace especial nuestro día.'
+      name: 'Padrinos de Velación',
+      role: 'Velación',
+      image: '/velacion.jpeg',
+      description: 'Luz y guía en nuestro camino juntos.'
     }
   ];
 
@@ -141,7 +134,7 @@ export default function WeddingSponsors() {
                     src={sponsor.image}
                     alt={sponsor.name}
                     fill
-                    className="object-cover"
+                    className="object-contain h-full p-2 w-full"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
