@@ -65,6 +65,7 @@ export default function OurStory() {
               loading="lazy"
               width={140}
               height={140}
+              quality={80}
               alt="Logo"
               className="w-28 h-28 md:w-36 md:h-36 drop-shadow-2xl relative z-10 transform group-hover:scale-110 transition-transform duration-500"
             />

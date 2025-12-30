@@ -3,9 +3,11 @@
 import { useEffect, useState } from 'react';
 import { Heart, Calendar, Clock } from 'lucide-react';
 import HedgehogDecoration from './HedgehogDecoration';
+import Image from 'next/image';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -18,10 +20,18 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-start justify-center overflow-hidden bg-wedding-light-bg dark:bg-wedding-dark-bg">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/resource-photo-1.jpg)' }}
-      ></div>
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/resource-photo-1.jpg"
+          alt="Hero background"
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className={`object-cover transition-opacity duration-500 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoadingComplete={() => setIsImageLoaded(true)}
+        />
+      </div>
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>

@@ -94,6 +94,7 @@ export default function Gallery() {
                     src={image.src || "/placeholder.svg"}
                     alt={`Wedding photo ${image.id}`}
                     fill
+                    quality={80}
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 50vw, 33vw"
                     onError={(e) => {

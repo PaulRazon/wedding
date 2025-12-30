@@ -135,6 +135,7 @@ export default function WeddingSponsors() {
                     alt={sponsor.name}
                     fill
                     loading="lazy"
+                    quality={80}
                     className="object-contain h-full p-2 w-full"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;

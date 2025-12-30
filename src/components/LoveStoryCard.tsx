@@ -124,6 +124,7 @@ export default function LoveStoryCard() {
               loading="lazy"
               src={currentStory.image || "/placeholder.svg"}
               alt={currentStory.title}
+              quality={80}
               fill
               className="object-cover"
             />
