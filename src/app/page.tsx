@@ -75,20 +75,8 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
-        {/* Love Story Card */}
-        <LoveStoryCard />
         {/* Our Story Section */}
         <OurStory />
-        {/* Photo Section 1 */}
-        <PhotoSection
-          imageUrl="/save-date.jpg"
-          title="Queridas Almas Luminosas"
-          quote="Estamos muy felices de dar este paso en nuestra vida y hoy queremos compartir nuestra alegría junto a ustedes. Por eso hemos elegido a las personas más cercanas en nuestra vida, ¡sería un gusto tenerte en un día tan significativo para nosotros!"
-          reverse={false}
-        />
-
-        {/* Ceremony Section */}
-        <Ceremony />
 
         {/* Photo Section 2 */}
         <PhotoSection
@@ -97,11 +85,15 @@ export default function Home() {
           author="Anahí & Eduardo"
           reverse={true}
         />
+        {/* Ceremony Section */}
+        <Ceremony />
+        {/* Dress Code Section */}
+        <DressCode />
         {/* Reception Section */}
         <Reception />
 
-        {/* Dress Code Section */}
-        <DressCode />
+        {/* Love Story Card */}
+        <LoveStoryCard />
 
         {/* Gallery Section */}
         <Gallery />
@@ -114,18 +106,23 @@ export default function Home() {
           reverse={false}
         />
 
-        
+        <WeddingSponsors />
 
         {/* Footer */}
         <GiftsSection />
         {/* Reception Details */}
-        <WeddingSponsors />
 
-        
-        
+        {/* Photo Section 1 */}
+        <PhotoSection
+          imageUrl="/save-date.jpg"
+          title="Queridas Almas Luminosas"
+          quote="Estamos muy felices de dar este paso en nuestra vida y hoy queremos compartir nuestra alegría junto a ustedes. Por eso hemos elegido a las personas más cercanas en nuestra vida, ¡sería un gusto tenerte en un día tan significativo para nosotros!"
+          reverse={false}
+        />
 
-{/* RSVP Section */}
+        {/* RSVP Section */}
         <RSVP />
+
         <Footer />
         {/* Mobile Bottom Navigation */}
         <MobileBottomNav />

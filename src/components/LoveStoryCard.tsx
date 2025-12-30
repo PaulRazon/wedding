@@ -40,9 +40,8 @@ export default function LoveStoryCard() {
       id: 1,
       title: "Un amor bonito y eterno",
       emoji: "📖",
-      image: "/resource-photo-1.jpg",
-      text: `En el pueblo verde de Avonlea, donde los caminos de tierra se cruzan con los sueños, una niña de ojos brillantes llamada Ani encontró su hogar en la imaginación y el corazón de Eduard. Sus almas se entrelazaron como las ramas de los árboles en el bosque. Eduard le confesó solemnemente: "Eres el objeto de mi afecto". Y el destino escribió con la tinta de la amistad y el amor un:
- Felices para siempre`,
+      image: "/resource-photo-6.jpg",
+      text:  "Comprobamos que el amor llega a tu vida de muchas maneras y se queda cuando dos almas están preparadas en el nombre de Dios. Así nos sucedió. Nos conocíamos de vista y de nombre en secundaria y preparatoria, pero fue hasta en nivel universitario que todo se acomodó para que lo nuestro fluyera. Dios nos permitió adquirir esas cualidades que tanto buscábamos en ese alguien, eso lo hizo mágico y dio paso a nuestra química. El 05 de abril de 2018 tuvimos una bella cita romántica en una cafetería, donde Eduard declaró su amor con un ramo de rosas y palabras bonitas, ese día iniciamos nuestro noviazgo llenos de ilusiones y emociones, desde entonces el 05 de cada mes es un genuino homenaje a nuestro amor y ni se diga los 05 de abril, pues no hay aniversario que no celebremos llenos de aun más emoción que el primer día. Desde hace años somos un equipo y sabíamos que queríamos compartir la vida, juntos, solo que Eduard buscaba el momento especial, después de tanto pensarlo, vaya que tanto, el 05 de octubre de 2024 me propuso matrimonio, honrando el estilo de nuestra relación: romántica, mágica y llena de emoción, pues así fue esa cita, con el factor sorpresa de que yo no sabía que era nuestro gran día. Hubo lágrimas de felicidad, risas, miradas llenas de amor y una fuerte conexión de anhelos. Juntos iniciamos el proceso de boda, disfrutando cada momento, convirtiéndonos en los wedding planners que mejor comprendían el concepto mágico de nuestro amor. Hoy estamos tan felices de unir nuestras vidas, de celebrar el amor bonito y eterno que nos tenemos.",
     }
   ]
 
@@ -136,9 +135,7 @@ export default function LoveStoryCard() {
           <div className="space-y-4">
             <div className="flex items-start gap-4">
               <div className="w-full">
-                <h3 className="great-vibes-regular text-2xl md:text-3xl font-medium mb-4 text-center">
-                  {currentStory.title}
-                </h3>
+               
 
                 <div className="relative">
                   <p

@@ -80,7 +80,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
           className={`object-cover transition-opacity duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}
           onLoadingComplete={() => setIsImageLoaded(true)}
         />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
       </div>
 
       {/* Main Content */}
