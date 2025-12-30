@@ -71,7 +71,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
       {/* Background Image with optimized loading */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/welcome-image.png" // Replace with your actual image path
+          src="/resource-photo-3.jpg" // Replace with your actual image path
           alt="Wedding welcome background"
           fill
           priority
