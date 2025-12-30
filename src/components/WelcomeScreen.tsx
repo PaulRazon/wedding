@@ -1,8 +1,9 @@
+// src/components/WelcomeScreen.tsx
 'use client';
 
-import { useState } from 'react';
-import { Heart, Lock } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { useState, useCallback, useEffect } from 'react';
+import { Lock } from 'lucide-react';
+import Image from 'next/image';
 
 interface WelcomeScreenProps {
   onOpenInvitation: () => void;
@@ -10,185 +11,141 @@ interface WelcomeScreenProps {
 
 export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) {
   const [isOpening, setIsOpening] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  const handleOpenInvitation = () => {
+  // Use useCallback to memoize the handler
+  const handleOpenInvitation = useCallback(async () => {
+    if (isOpening) return;
+    
     setIsOpening(true);
-    
-    // Initial big confetti burst
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#F5F1EB', '#E8DDD4', '#D4C4B0', '#C7B299', '#A69080', '#ffd700'],
-      zIndex: 9999
-    });
+    try {
+      // Add a small delay for better UX
+      await new Promise(resolve => setTimeout(resolve, 1200));
+      onOpenInvitation();
+    } finally {
+      setIsOpening(false);
+    }
+  }, [isOpening, onOpenInvitation]);
 
-    // Heart-shaped confetti burst
-    setTimeout(() => {
-      confetti({
-        particleCount: 50,
-        spread: 55,
-        origin: { y: 0.55 },
-        colors: ['#D4C4B0', '#C7B299', '#E8DDD4', '#F5F1EB'],
-        shapes: ['circle'],
-        scalar: 1.5,
-        zIndex: 9999
-      });
-    }, 200);
-    
-    // Confetti explosion
-    const duration = 3000;
-    const animationEnd = Date.now() + duration;
-    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+  // Add intersection observer for animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-    function randomInRange(min: number, max: number) {
-      return Math.random() * (max - min) + min;
+    const element = document.getElementById('welcome-screen');
+    if (element) {
+      observer.observe(element);
     }
 
-    const interval: NodeJS.Timeout = setInterval(function() {
-      const timeLeft = animationEnd - Date.now();
-
-      if (timeLeft <= 0) {
-        clearInterval(interval);
-        setTimeout(() => {
-          onOpenInvitation();
-        }, 500);
-        return;
+    return () => {
+      if (element) {
+        observer.unobserve(element);
       }
+    };
+  }, []);
 
-      const particleCount = 50 * (timeLeft / duration);
-      
-      // Wedding colors confetti - Left side
-      confetti({
-        ...defaults,
-        particleCount,
-        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-        colors: ['#F5F1EB', '#E8DDD4', '#D4C4B0', '#C7B299', '#A69080', '#ffd700'],
-        shapes: ['square', 'circle'],
-        scalar: randomInRange(0.8, 1.2)
-      });
-      
-      // Wedding colors confetti - Right side
-      confetti({
-        ...defaults,
-        particleCount,
-        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-        colors: ['#F5F1EB', '#E8DDD4', '#D4C4B0', '#C7B299', '#A69080', '#ffd700'],
-        shapes: ['square', 'circle'],
-        scalar: randomInRange(0.8, 1.2)
-      });
-
-      // Center explosion every 500ms
-      if (Math.floor(timeLeft / 500) % 2 === 0) {
-        confetti({
-          ...defaults,
-          particleCount: particleCount * 1.5,
-          origin: { x: 0.5, y: 0.5 },
-          colors: ['#F5F1EB', '#E8DDD4', '#D4C4B0', '#C7B299', '#A69080', '#ffd700'],
-          shapes: ['circle'],
-          scalar: 1.2,
-          spread: 180,
-          startVelocity: 45
-        });
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        handleOpenInvitation();
       }
+    };
 
-      // Beige confetti rain from top
-      if (Math.floor(timeLeft / 750) % 3 === 0) {
-        confetti({
-          particleCount: 30,
-          angle: 90,
-          spread: 45,
-          origin: { x: Math.random(), y: 0 },
-          colors: ['#E8DDD4', '#D4C4B0', '#ffd700'],
-          shapes: ['square'],
-          scalar: 0.8,
-          zIndex: 9999,
-          gravity: 0.8
-        });
-      }
-    }, 250);
-  };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleOpenInvitation]);
 
   return (
-    <div className="fixed inset-0 z-50 flex h-screen items-center justify-center overflow-hidden relative">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: 'url(/resource-photo-3.jpg)',
-          filter: 'brightness(0.7)'
-        }}
-      ></div>
-      
-      {/* Darker overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
-
-      {/* Floating Hearts */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
-          <Heart
-            key={i}
-            className="absolute text-white/20 animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.5}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
-              fontSize: `${1 + Math.random() * 1.5}rem`,
-            }}
-          />
-        ))}
+    <div 
+      id="welcome-screen"
+      className="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden"
+    >
+      {/* Background Image with optimized loading */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/welcome-bg.jpg" // Replace with your actual image path
+          alt="Wedding welcome background"
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className={`object-cover transition-opacity duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoadingComplete={() => setIsImageLoaded(true)}
+        />
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-        {/* Wedding Title */}
-        <div className="mb-12 text-center">
-          <h1 className="great-vibes-regular text-5xl md:text-6xl text-white mb-4">
+      <div className={`relative z-10 w-full max-w-4xl text-center px-4 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}>
+        {/* Logo or Title */}
+        <div className="mb-8 md:mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 font-playfair">
             Anahí & Eduardo
           </h1>
-          <div className="w-24 h-1 bg-white/60 mx-auto mb-4"></div>
-          <p className="habibi-regular text-white/90 text-xl">
+          <p className="text-lg md:text-xl text-white/90 font-light">
             Nos casamos
           </p>
-          <p className="habibi-regular text-white/80 mt-2">
+          <div className="w-24 h-1 bg-white/50 mx-auto my-6"></div>
+          <p className="text-white/80 text-sm md:text-base">
             11 de Abril, 2026
           </p>
         </div>
-        
+
         {/* Content Card with backdrop */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl w-full max-w-lg">
-         
-            <button
-              onClick={handleOpenInvitation}
-              disabled={isOpening}
-              className={`group bg-white relative overflow-hidden 
-                       text-gray-800 px-10 py-4 rounded-full habibi-regular font-bold  text-xs md:text-sm
-                       transition-all duration-500 transform hover:scale-105 shadow-xl
-                       border-2 border-gray-300 hover:border-gray-400
-                       ${isOpening ? 'animate-pulse cursor-not-allowed' : 'hover:shadow-2xl'}`}
-            >
-              <span className="relative z-10 flex items-center gap-3">
-                {isOpening ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
-                    Abriendo...
-                  </>
-                ) : (
-                  <>
-                    <Lock className="h-6 w-6 group-hover:animate-bounce " />
-                    ¡CORAZÓN PALPITANTE, MANOS TEMBLOROSAS, ¡TOCA AQUÍ!
-                  </>
-                )}
-              </span>
-              
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-wedding-secondary to-wedding-rose 
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </button>
-          </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl w-full max-w-md mx-auto">
+          <button
+            onClick={handleOpenInvitation}
+            disabled={isOpening}
+            className={`group relative overflow-hidden 
+                      text-gray-800 px-8 py-3 sm:px-10 sm:py-4 rounded-full 
+                      font-bold text-xs sm:text-sm md:text-base
+                      transition-all duration-300 transform hover:scale-105 shadow-xl
+                      border-2 border-white/30 hover:border-white/50
+                      bg-white/90 hover:bg-white
+                      ${isOpening ? 'cursor-not-allowed' : ''}
+                      focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2`}
+            aria-label={isOpening ? "Abriendo invitación..." : "Abrir invitación"}
+          >
+            <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
+              {isOpening ? (
+                <>
+                  <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-gray-800 border-t-transparent rounded-full animate-spin"></span>
+                  <span>Abriendo...</span>
+                </>
+              ) : (
+                <>
+                  <Lock className="h-4 w-4 sm:h-6 sm:w-6 group-hover:animate-bounce transition-transform" />
+                  <span>¡CORAZÓN PALPITANTE, MANOS TEMBLOROSAS, ¡TOCA AQUÍ!</span>
+                </>
+              )}
+            </span>
+            
+            {/* Hover Effect */}
+            <span 
+              className="absolute inset-0 bg-gradient-to-r from-wedding-secondary/80 to-wedding-rose/80 
+                       opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0"
+              aria-hidden="true"
+            ></span>
+          </button>
         </div>
       </div>
-      
+
+      {/* Decorative Elements */}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-4">
+        <div className="w-2 h-2 rounded-full bg-white/50 animate-bounce" style={{ animationDelay: '0s' }}></div>
+        <div className="w-2 h-2 rounded-full bg-white/50 animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+        <div className="w-2 h-2 rounded-full bg-white/50 animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+      </div>
+    </div>
   );
 }
