@@ -41,10 +41,11 @@ export default function LoveQuote() {
           <div className="relative bg-gradient-to-br from-[#faf6f0]/95 to-[#f8f4ed]/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-[#d4b5a0]/30">
             {/* Comillas decorativas */}
             <div className="absolute -top-4 -left-4 text-6xl text-[#d4b5a0] opacity-30 font-serif">
-              "
+              {/* Quote */}
+              &rdquo;
             </div>
             <div className="absolute -bottom-4 -right-4 text-6xl text-[#d4b5a0] opacity-30 font-serif">
-              "
+              &ldquo;
             </div>
             {/* Texto romántico */}
             <div className="relative space-y-6">
@@ -66,7 +67,7 @@ export default function LoveQuote() {
               <div className="my-8 relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f5e6d3]/40 to-transparent" />
                 <p className="text-xl md:text-2xl great-vibes-regular text-center text-[#b89a7e] font-semibold relative py-4">
-                  "Eres el objeto de mi afecto"
+                 &rdquo; Eres el objeto de mi afecto &ldquo;
                 </p>
               </div>
 
@@ -79,7 +80,7 @@ export default function LoveQuote() {
                 <div className="inline-block relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#d4b5a0] to-[#f5e6d3] blur-xl opacity-40" />
                   <p className="text-2xl md:text-3xl pinyon-script-regular bg-gradient-to-r from-[#b89a7e] via-[#d4b5a0] to-[#b89a7e] bg-clip-text text-transparent relative">
-                    Felices para siempre...
+                    &ldquo;Felices para siempre...&rdquo;
                   </p>
                 </div>
               </div>
