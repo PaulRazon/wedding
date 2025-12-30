@@ -121,6 +121,7 @@ export default function LoveStoryCard() {
         <section className="mb-8 relative z-10">
           <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl">
             <Image
+              loading="lazy"
               src={currentStory.image || "/placeholder.svg"}
               alt={currentStory.title}
               fill

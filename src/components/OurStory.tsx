@@ -62,6 +62,7 @@ export default function OurStory() {
             <div className="absolute inset-0 bg-[#e8b4a0]/30 rounded-full blur-xl group-hover:bg-[#e8b4a0]/40 transition-all duration-500"></div>
             <Image
               src="/logo-erizos.png"
+              loading="lazy"
               width={140}
               height={140}
               alt="Logo"

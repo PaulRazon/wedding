@@ -90,6 +90,7 @@ export default function Gallery() {
               >
                 <div className="relative w-full h-full">
                   <Image
+                    loading="lazy"
                     src={image.src || "/placeholder.svg"}
                     alt={`Wedding photo ${image.id}`}
                     fill
