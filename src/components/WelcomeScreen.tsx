@@ -89,7 +89,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
       }`}>
         {/* Logo or Title */}
         <div className="mb-8 md:mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 font-playfair">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 font-playfair great-vibes-regular">
             Anahí & Eduardo
           </h1>
           <p className="text-lg md:text-xl text-white/90 font-light">
