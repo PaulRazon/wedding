@@ -17,6 +17,7 @@ import LoveStoryCard from "@/components/LoveStoryCard";
 import ReceptionDetails from "@/components/ReceptionDetails";
 import WeddingSponsors from "@/components/WeddingSponsors";
 import GiftsSection from "@/components/GiftsSection";
+import Introduction from "@/components/Introduction";
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -72,9 +73,14 @@ export default function Home() {
         {/* Navigation */}
         <Navbar isMusicPlaying={isMusicPlaying} toggleMusic={toggleMusic} />
 
+     
+
         {/* Hero Section */}
         <Hero />
+           
 
+        {/* Introduction Section */}
+        <Introduction />
         {/* Our Story Section */}
         <OurStory />
 

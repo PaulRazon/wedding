@@ -88,7 +88,7 @@ export default function OurStory() {
             Un amor bonito y eterno
           </h2>
 
-          {/* Story Text with enhanced styling and smooth transitions */}
+          {/* Story Text with enhanced styling and smooth transitions
           <div className="max-w-3xl mx-auto mb-10">
             <div className="relative bg-[#fefbf8]/80 dark:bg-[#3a3330]/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 border border-[#e8b4a0]/30 dark:border-[#a88872]/30 shadow-2xl shadow-[#c19a7f]/10">
               <div className="relative">
@@ -122,7 +122,7 @@ export default function OurStory() {
                 )}
               </Button>
             </div>
-          </div>
+          </div> */}
         </section>
 
         {/* Couple Information Card with enhanced design */}
