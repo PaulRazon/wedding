@@ -118,13 +118,7 @@ export default function Gallery() {
             ))}
           </div>
 
-          {/* Gallery Note */}
-          <div className="text-center mt-12 pt-8 border-t border-[#e8b4a0]/30 dark:border-[#a88872]/30">
-            <Sparkles className="w-6 h-6 text-[#e8b4a0] mx-auto mb-3 animate-pulse" />
-            <p className="habibi-regular text-base text-[#a88872] dark:text-[#c7b299] italic">
-              Próximamente compartiremos nuestras fotos más especiales
-            </p>
-          </div>
+       
         </div>
       </div>
     </section>
