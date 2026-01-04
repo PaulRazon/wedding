@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Shirt, User, Ban, Sparkles } from "lucide-react"
+import { Ban, Clock, Camera, Sparkles, Heart } from "lucide-react"
 
 export default function DressCode() {
   const [isVisible, setIsVisible] = useState(false)
@@ -37,134 +37,147 @@ export default function DressCode() {
     <section
       ref={sectionRef}
       id="vestimenta"
-      className="py-20 px-4 bg-gradient-to-br from-[#eae4cc] via-[#f5f0dc] to-[#eae4cc] relative overflow-hidden"
+      className="py-20 px-4 bg-gradient-to-br from-[#f5f1eb] via-[#fef4ed] to-[#fde8e9] relative overflow-hidden"
     >
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-32 h-32 border-2 border-[#8b7355] rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 border-2 border-[#8b7355] rounded-full"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 border-2 border-[#8b7355] rounded-full"></div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#f4d5c6]/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#e8c5b5]/30 rounded-full blur-3xl animate-float-delayed"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-[#fde8e9]/40 rounded-full blur-2xl animate-bounce-slow"></div>
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`text-center mb-12 transition-all duration-1000 ${
             isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
           }`}
         >
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#8b7355] to-transparent"></div>
-            <Sparkles className="w-6 h-6 text-[#8b7355]" />
-            <div className="w-16 h-px bg-gradient-to-l from-transparent via-[#8b7355] to-transparent"></div>
+          <div className="flex items-center justify-center mb-6" aria-hidden="true">
+            <Sparkles className="h-4 w-4 text-[#e8b4a0] mr-3 animate-pulse" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent"></div>
+            <Heart className="h-6 w-6 text-[#d4a89a] mx-3 animate-bounce-slow" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent"></div>
+            <Sparkles className="h-4 w-4 text-[#e8b4a0] ml-3 animate-pulse" style={{ animationDelay: "0.5s" }} />
           </div>
-          <h2 className="great-vibes-regular text-5xl md:text-6xl font-light text-[#5a4a3a] mb-4 tracking-wide">
-            Código de Vestimenta
+          <h2 className="great-vibes-regular text-5xl md:text-6xl font-light bg-gradient-to-r from-[#c19a7f] via-[#e8b4a0] to-[#f5c7c1] bg-clip-text text-transparent mb-6 tracking-wide drop-shadow-lg">
+            Código de vestimenta
           </h2>
-          <p className="habibi-regular text-xl text-[#6b5b4b] max-w-2xl mx-auto">
-            Vístete elegante para la ocasión y ayúdanos a crear un ambiente mágico
+          <p className="habibi-regular text-lg text-[#5a4a3a] max-w-3xl mx-auto leading-relaxed mb-4">
+            Viste formal. Además el color distintivo de nuestra boda es el{" "}
+            <span className="font-semibold text-blue-700">azul</span>, por lo que te pedimos no utilizarlo.
+          </p>
+          <p className="habibi-regular text-lg text-[#5a4a3a] max-w-3xl mx-auto leading-relaxed">
+            Nuestro evento es en un jardín al aire libre, te recomendamos usar tacón grueso y llevar abrigo.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div
-            className={`bg-white/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-[#d4c5a9] shadow-lg transition-all duration-1000 delay-200 hover:shadow-xl hover:scale-[1.02] ${
+            className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#f4d5c6]/60 shadow-2xl shadow-[#e8b4a0]/20 transition-all duration-1000 delay-200 hover:shadow-3xl hover:scale-[1.02] ${
               isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
             }`}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                <User className="h-7 w-7 text-blue-600" />
-              </div>
-              <h3 className="great-vibes-regular text-3xl font-medium text-[#5a4a3a]">Hombres</h3>
+            <div className="mb-6 text-center">
+              <h3 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-4">Mujeres</h3>
+              <p className="habibi-regular text-base text-[#5a4a3a]">
+                Te sugerimos usar tonos pastel en amarillo, verde, rosa, lila, anaranjado o gris.
+              </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-start gap-3 bg-gradient-to-r from-blue-50 to-transparent rounded-lg p-4 border-l-4 border-blue-400">
-                <Ban className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="habibi-regular text-base text-[#5a4a3a] font-medium mb-2">Color Restringido</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full border-3 border-red-400 shadow-md"></div>
-                    <span className="habibi-regular text-sm text-[#6b5b4b]">
-                      Evita el color <strong>azul</strong> (nuestro color distintivo)
+            <div className="grid grid-cols-3 gap-3">
+              {suggestedColors.map((colorItem, index) => (
+                <div
+                  key={index}
+                  className="group relative overflow-hidden rounded-full w-full aspect-square transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer border-2 border-white"
+                  style={{ backgroundColor: colorItem.color }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span
+                      className="font-semibold text-sm drop-shadow-sm transition-transform group-hover:scale-110"
+                      style={{ color: colorItem.textColor }}
+                    >
+                      {colorItem.name}
                     </span>
                   </div>
+                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300"></div>
                 </div>
-              </div>
-
-              <div className="flex items-center gap-3 bg-amber-50/50 rounded-lg p-4">
-                <Shirt className="w-6 h-6 text-[#8b7355]" />
-                <p className="habibi-regular text-sm text-[#6b5b4b]">Traje formal o semi-formal sugerido</p>
-              </div>
+              ))}
             </div>
           </div>
 
           <div
-            className={`bg-white/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-[#d4c5a9] shadow-lg transition-all duration-1000 delay-300 hover:shadow-xl hover:scale-[1.02] ${
+            className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#f4d5c6]/60 shadow-2xl shadow-[#e8b4a0]/20 transition-all duration-1000 delay-300 hover:shadow-3xl hover:scale-[1.02] ${
               isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
             }`}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-pink-100 to-purple-200 flex items-center justify-center">
-                <Sparkles className="h-7 w-7 text-pink-600" />
-              </div>
-              <h3 className="great-vibes-regular text-3xl font-medium text-[#5a4a3a]">Mujeres</h3>
-            </div>
+            <div className="text-center">
+              <h3 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-6">Hombres</h3>
 
-            <div>
-              <h4 className="habibi-regular text-base font-medium text-[#5a4a3a] mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#8b7355] rounded-full"></span>
-                Colores Sugeridos
-              </h4>
-              <div className="grid grid-cols-3 gap-3">
-                {suggestedColors.map((colorItem, index) => (
-                  <div
-                    key={index}
-                    className="group relative overflow-hidden rounded-2xl w-full aspect-square transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer border-2 border-white"
-                    style={{ backgroundColor: colorItem.color }}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span
-                        className="font-semibold text-sm drop-shadow-sm transition-transform group-hover:scale-110"
-                        style={{ color: colorItem.textColor }}
-                      >
-                        {colorItem.name}
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300"></div>
-                  </div>
-                ))}
+              <div className="flex items-start gap-3 bg-[#fef4ed]/60 rounded-lg p-6 border-2 border-[#f4d5c6]">
+                <Ban className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+                <div className="text-left">
+                  <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed">
+                    Solo te pedimos que evites vestir traje o camisa{" "}
+                    <span className="font-semibold text-blue-700">azul</span>.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div
-          className={`bg-gradient-to-r from-amber-50/50 to-orange-50/50 backdrop-blur-sm rounded-2xl p-8 border-2 border-[#d4c5a9] shadow-lg transition-all duration-1000 delay-400 ${
+          className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#f4d5c6]/60 shadow-2xl shadow-[#e8b4a0]/20 transition-all duration-1000 delay-400 mb-8 hover:shadow-3xl hover:scale-[1.02] ${
             isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
           }`}
         >
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center flex-shrink-0">
-              <Shirt className="h-8 w-8 text-amber-700" />
+          <div className="flex flex-col items-center text-center gap-4">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e8b4a0] to-[#d4a89a] rounded-full blur-xl opacity-40 animate-pulse"></div>
+              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-[#fef4ed] to-[#fde8e9] flex items-center justify-center flex-shrink-0 shadow-md">
+                <Clock className="h-8 w-8 text-[#c19a7f]" />
+              </div>
             </div>
-            <div className="flex-1">
-              <h4 className="habibi-regular text-lg font-medium text-[#5a4a3a] mb-2">Recomendaciones Especiales</h4>
-              <p className="habibi-regular text-base text-[#6b5b4b] leading-relaxed">
-                <strong>Evento al aire libre:</strong> Recomendamos usar tacón grueso o zapatos cómodos. Considera
-                llevar un abrigo ligero para la noche, ya que la temperatura puede descender.
+            <div>
+              <h4 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-4">Llega puntual</h4>
+              <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed max-w-3xl mx-auto">
+                Elegimos un horario con la luz más bonita para que puedan tomarse muchas fotos y crear bellos recuerdos
+                antes de la ceremonia.
+              </p>
+              <p className="great-vibes-regular text-2xl text-[#c19a7f] mt-3">
+                Llegar temprano será parte de la magia.
               </p>
             </div>
           </div>
         </div>
 
         <div
-          className={`text-center mt-10 transition-all duration-1000 delay-500 ${
+          className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#f4d5c6]/60 shadow-2xl shadow-[#e8b4a0]/20 transition-all duration-1000 delay-500 hover:shadow-3xl hover:scale-[1.02] ${
             isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
           }`}
         >
-          <p className="great-vibes-regular text-2xl text-[#8b7355]">
-            ¡Gracias por ayudarnos a hacer de este día algo inolvidable!
-          </p>
+          <div className="flex flex-col items-center text-center gap-4">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e8b4a0] to-[#d4a89a] rounded-full blur-xl opacity-40 animate-pulse"></div>
+              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-[#fef4ed] to-[#fde8e9] flex items-center justify-center flex-shrink-0 shadow-md">
+                <Camera className="h-8 w-8 text-[#c19a7f]" />
+              </div>
+            </div>
+            <div>
+              <h4 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-4">Momentos mágicos</h4>
+              <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed max-w-3xl mx-auto mb-4">
+                Nos llenaría el alma que capturen momentos desde su mirada. Si deciden grabar o tomar fotos, sólo
+                háganlo sin obstruir el trabajo del fotógrafo.
+              </p>
+              <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed max-w-3xl mx-auto mb-4">
+                No olvides enviarnos las fotos y videos que hayas tomado; en la recepción te compartiremos un enlace
+                para subirlas. Nos encantará ver cómo viviste nuestro gran día.
+              </p>
+              <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed max-w-3xl mx-auto">
+                Por cierto, si deseas una foto por parte del fotógrafo, no dudes en pedirla; es parte de nuestro
+                servicio.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

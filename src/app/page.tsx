@@ -18,12 +18,32 @@ import ReceptionDetails from "@/components/ReceptionDetails";
 import WeddingSponsors from "@/components/WeddingSponsors";
 import GiftsSection from "@/components/GiftsSection";
 import Introduction from "@/components/Introduction";
+import PajecitosSection from "@/components/PajecitosSection";
+import WelcomeMessage from "@/components/welcome-message";
 
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
+  const [mediaQuery, setMediaQuery] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+      setMediaQuery(e.matches);
+    };
+
+    // Set the initial value
+    setMediaQuery(mediaQuery.matches);
+
+    // Add listener
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);  
+
+    
+  }, []);
   const handleOpenInvitation = () => {
     setShowWelcome(false);
     // Start music automatically when invitation opens
@@ -83,14 +103,15 @@ export default function Home() {
         <Introduction />
         {/* Our Story Section */}
         <OurStory />
-
-        {/* Photo Section 2 */}
-        <PhotoSection
-          imageUrl="/resource-photo-2.jpg"
-          quote="El amor verdadero no se encuentra, se construye día a día con paciencia, comprensión y respeto mutuo."
-          author="Anahí & Eduardo"
-          reverse={true}
+        {!mediaQuery ?<PhotoSection
+          imageUrl="/save-date.jpg"
+          title="Queridas Almas Luminosas"
+          quote="Estamos muy felices de dar este paso en nuestra vida y hoy queremos compartir nuestra alegría junto a ustedes. Por eso hemos elegido a las personas más cercanas en nuestra vida, ¡sería un gusto tenerte en un día tan significativo para nosotros!"
+          reverse={false}
         />
+        :<WelcomeMessage />}
+        {/* Photo Section 2 */}
+        
         {/* Ceremony Section */}
         <Ceremony />
         {/* Dress Code Section */}
@@ -113,17 +134,17 @@ export default function Home() {
         />
 
         <WeddingSponsors />
-
+        <PajecitosSection />
         {/* Footer */}
         <GiftsSection />
         {/* Reception Details */}
 
         {/* Photo Section 1 */}
         <PhotoSection
-          imageUrl="/save-date.jpg"
-          title="Queridas Almas Luminosas"
-          quote="Estamos muy felices de dar este paso en nuestra vida y hoy queremos compartir nuestra alegría junto a ustedes. Por eso hemos elegido a las personas más cercanas en nuestra vida, ¡sería un gusto tenerte en un día tan significativo para nosotros!"
-          reverse={false}
+          imageUrl="/resource-photo-2.jpg"
+          quote="El amor verdadero no se encuentra, se construye día a día con paciencia, comprensión y respeto mutuo."
+          author="Anahí & Eduardo"
+          reverse={true}
         />
 
         {/* RSVP Section */}
