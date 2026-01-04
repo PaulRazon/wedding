@@ -58,7 +58,7 @@ export default function DressCode() {
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent"></div>
             <Sparkles className="h-4 w-4 text-[#e8b4a0] ml-3 animate-pulse" style={{ animationDelay: "0.5s" }} />
           </div>
-          <h2 className="great-vibes-regular text-5xl md:text-6xl font-light bg-gradient-to-r from-[#c19a7f] via-[#e8b4a0] to-[#f5c7c1] bg-clip-text text-transparent mb-6 tracking-wide drop-shadow-lg">
+          <h2 className="great-vibes-regular text-5xl md:text-6xl pt-1 font-light bg-gradient-to-r from-[#c19a7f] via-[#e8b4a0] to-[#f5c7c1] bg-clip-text text-transparent mb-6 tracking-wide drop-shadow-lg">
             Código de vestimenta
           </h2>
           <p className="habibi-regular text-lg text-[#5a4a3a] max-w-3xl mx-auto leading-relaxed mb-4">
