@@ -48,7 +48,7 @@ export default function WelcomeMessage() {
       <div className="relative max-w-4xl mx-auto">
         <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-12 md:p-16 shadow-lg border border-[#e8b4a0]/30">
           {/* Título */}
-          <h2 className="text-4xl md:text-5xl font-serif text-center mb-8 bg-gradient-to-r from-[#a88872] via-[#c19a7f] to-[#a88872] bg-clip-text text-transparent tracking-wide">
+          <h2 className="great-vibes-regular text-4xl md:text-5xl font-serif text-center mb-8 bg-gradient-to-r from-[#a88872] via-[#c19a7f] to-[#a88872] bg-clip-text text-transparent tracking-wide">
             Queridas Almas Luminosas
           </h2>
 
