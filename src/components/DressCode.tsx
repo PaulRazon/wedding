@@ -140,8 +140,7 @@ export default function DressCode() {
             <div>
               <h4 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-4">Llega puntual</h4>
               <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed max-w-3xl mx-auto">
-                Elegimos un horario con la luz más bonita para que puedan tomarse muchas fotos y crear bellos recuerdos
-                antes de la ceremonia.
+                Elegimos un horario con la luz más bonita para capturar momentos inolvidables a la luz del atardecer.
               </p>
               <p className="great-vibes-regular text-2xl text-[#c19a7f] mt-3">
                 Llegar temprano será parte de la magia.
@@ -173,8 +172,7 @@ export default function DressCode() {
                 para subirlas. Nos encantará ver cómo viviste nuestro gran día.
               </p>
               <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed max-w-3xl mx-auto">
-                Por cierto, si deseas una foto por parte del fotógrafo, no dudes en pedirla; es parte de nuestro
-                servicio.
+                Sabemos que también te vas a ver espectacular, por lo que si deseas una foto por parte del fotógrafo, no dudes en pedírsela si está desocupado. Es un servicio gratis; después te enviamos tu foto.
               </p>
             </div>
           </div>

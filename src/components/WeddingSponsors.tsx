@@ -8,7 +8,7 @@ interface Sponsor {
   id: number
   name: string
   role: string
-  image: string
+  images: string[] // Changed from single image to array
   description?: string
 }
 
@@ -18,69 +18,71 @@ export default function WeddingSponsors() {
 
   const sponsors: Sponsor[] = [
     {
+      id: 9,
+      name: "Padrinos de Velación",
+      role: "Velación",
+      images: ["/velacion.jpeg", "/velacion2.jpeg"],
+      description: "Luz y guía en nuestro camino juntos.",
+    },
+    {
       id: 1,
       name: "Padrinos de Anillo",
       role: "Anillos",
-      image: "/anillos.jpeg",
-      description: "Con su bendición, nuestros anillos simbolizan el amor eterno.",
-    },
-    {
-      id: 2,
-      name: "Padrinos de Lazo",
-      role: "Lazo",
-      image: "/lazo.jpeg",
-      description: "Su guía nos une en este lazo sagrado de amor y compromiso.",
+      images: ["/anillos.jpeg", "/anillos2.jpeg"],
+      description:
+        "Con su bendición, nuestros anillos simbolizan el amor eterno.",
     },
     {
       id: 3,
-      name: "Padrinos de Arras",
+      name: "Madrina de Arras",
       role: "Arras",
-      image: "/arras.jpeg",
+      images: ["/arras.jpeg", "/arras2.jpeg"],
       description: "Su generosidad es el fundamento de nuestro nuevo hogar.",
     },
     {
-      id: 4,
-      name: "Padrinos de Ramo",
-      role: "Ramo",
-      image: "/ramo.jpeg",
-      description: "Su amor florece en cada pétalo de nuestro ramo nupcial.",
-    },
-    {
       id: 5,
-      name: "Padrinos de Biblia",
+      name: "Padrino de Biblia",
       role: "Biblia",
-      image: "/biblia.jpeg",
+      images: ["/biblia.jpeg", "/biblia2.jpeg"],
       description: "Su fe nos guía en este camino de bendición.",
     },
     {
       id: 6,
       name: "Padrinos de Cojines",
       role: "Cojines",
-      image: "/cojines.jpeg",
+      images: ["/cojines.jpeg", "/cojines2.jpeg"],
       description: "Su apoyo es el soporte de nuestra unión.",
     },
     {
-      id: 7,
-      name: "Padrinos de Musica",
-      role: "Musica",
-      image: "/musica.jpeg",
-      description: "Que su alegría sea el vino que celebre nuestro amor.",
-    },
-    {
       id: 8,
-      name: "Padrinos de Brindis",
+      name: "Madrina de Brindis",
       role: "Brindis",
-      image: "/brindis.jpeg",
+      images: ["/brindis.jpeg", "/brindis2.jpeg"],
       description: "Su cariño será recordado en cada detalle.",
     },
     {
-      id: 9,
-      name: "Padrinos de Velación",
-      role: "Velación",
-      image: "/velacion.jpeg",
-      description: "Luz y guía en nuestro camino juntos.",
+      id: 7,
+      name: "Padrino de Musica",
+      role: "Musica",
+      images: ["/musica.jpeg", "/musica2.jpeg"],
+      description: "Que su alegría sea el vino que celebre nuestro amor.",
     },
-  ]
+    {
+      id: 2,
+      name: "Padrinos de Lazo",
+      role: "Lazo",
+      images: ["/lazo.jpeg", "/lazo2.jpeg"],
+      description: "Su guía nos une en este lazo sagrado de amor y compromiso.",
+    },
+    {
+      id: 4,
+      name: "Padrinos de Ramo",
+      role: "Ramo",
+      images: ["/ramo.jpeg", "/ramo2.jpeg"],
+      description: "Su amor florece en cada pétalo de nuestro ramo nupcial.",
+    },
+  ];
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -155,20 +157,26 @@ export default function WeddingSponsors() {
                 animationDelay: `${index * 100}ms`,
               }}
             >
-              <div className="relative h-48 bg-gradient-to-br from-[#f5f1eb] via-[#fef5f1] to-[#e8b4a0]/20 overflow-hidden">
-                {sponsor.image ? (
-                  <Image
-                    src={sponsor.image || "/placeholder.svg"}
-                    alt={sponsor.name}
-                    fill
-                    loading="lazy"
-                    quality={80}
-                    className="object-contain h-full p-2 w-full transition-transform duration-500 group-hover:scale-110"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement
-                      target.style.display = "none"
-                    }}
-                  />
+              <div className="relative h-58 md:h-50 bg-gradient-to-br from-[#f5f1eb] via-[#fef5f1] to-[#e8b4a0]/20 overflow-hidden">
+                {sponsor.images && sponsor.images.length > 0 ? (
+                  <div className="flex h-full w-full gap-1">
+                    {sponsor.images.slice(0, 2).map((image, imgIndex) => (
+                      <div key={imgIndex} className="relative flex-1 h-full">
+                        <Image
+                          src={image || "/placeholder.svg"}
+                          alt={`${sponsor.name} ${imgIndex + 1}`}
+                          fill
+                          loading="lazy"
+                          quality={80}
+                          className=" h-fulltransition-transform duration-500"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement
+                            target.style.display = "none"
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <Users className="h-16 w-16 text-[#e8b4a0]/40" />
@@ -212,3 +220,6 @@ export default function WeddingSponsors() {
     </section>
   )
 }
+
+
+  
