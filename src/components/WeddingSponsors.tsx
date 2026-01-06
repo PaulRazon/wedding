@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { Heart, Sparkles, Award, Users } from "lucide-react"
-import Image from "next/image"
+import { useEffect, useRef, useState } from "react";
+import { Heart, Sparkles, Award, Users } from "lucide-react";
+import Image from "next/image";
 
 interface Sponsor {
-  id: number
-  name: string
-  role: string
-  images: string[] // Changed from single image to array
-  description?: string
+  id: number;
+  name: string;
+  role: string;
+  images: string[]; // Changed from single image to array
+  description?: string;
 }
 
 export default function WeddingSponsors() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const sponsors: Sponsor[] = [
     {
@@ -85,28 +85,27 @@ export default function WeddingSponsors() {
       id: 4,
       name: "Invitado Especial",
       role: "Cumpleañero",
-      images: ["/cumpleanero.jpeg", "/cumpleanero2.jpeg"],
+      images: ["/cumpleanero.jpeg"],
       description: "Celebrando un año más de vida en nuestro día especial.",
     },
   ];
-  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.3 },
-    )
+      { threshold: 0.3 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -114,7 +113,8 @@ export default function WeddingSponsors() {
       id="padrinos"
       className="py-16 px-4 relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #fefbf8 0%, #f5f1eb 50%, #fef5f1 100%)",
+        background:
+          "linear-gradient(135deg, #fefbf8 0%, #f5f1eb 50%, #fef5f1 100%)",
       }}
     >
       <div className="absolute top-20 left-10 w-32 h-32 bg-[#e8b4a0]/20 rounded-full blur-3xl animate-pulse"></div>
@@ -128,7 +128,9 @@ export default function WeddingSponsors() {
       ></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className={`text-center mb-12 transition-all duration-1000 animate-fade-in-up opacity-100`}>
+        <div
+          className={`text-center mb-12 transition-all duration-1000 animate-fade-in-up opacity-100`}
+        >
           <div className="flex items-center justify-center mb-6">
             <Heart className="h-4 w-4 text-[#e8b4a0] mr-3" />
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent"></div>
@@ -139,7 +141,8 @@ export default function WeddingSponsors() {
           <h2
             className="great-vibes-regular text-4xl md:text-5xl font-light mb-4 tracking-wide"
             style={{
-              background: "linear-gradient(135deg, #c19a7f 0%, #e8b4a0 50%, #a88872 100%)",
+              background:
+                "linear-gradient(135deg, #c19a7f 0%, #e8b4a0 50%, #a88872 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -167,22 +170,39 @@ export default function WeddingSponsors() {
               <div className="relative h-58 md:h-50 bg-gradient-to-br from-[#f5f1eb] via-[#fef5f1] to-[#e8b4a0]/20 overflow-hidden">
                 {sponsor.images && sponsor.images.length > 0 ? (
                   <div className="flex h-full w-full gap-1">
-                    {sponsor.images.slice(0, 2).map((image, imgIndex) => (
-                      <div key={imgIndex} className="relative flex-1 h-full">
+                    {sponsor.images.length === 1 ? (
+                      <div key={0} className="w-full h-full">
                         <Image
-                          src={image || "/placeholder.svg"}
-                          alt={`${sponsor.name} ${imgIndex + 1}`}
+                          src={sponsor.images[0] || "/placeholder.svg"}
+                          alt={`${sponsor.name} 1`}
                           fill
                           loading="lazy"
                           quality={80}
-                          className=" h-fulltransition-transform duration-500"
+                          className="object-cover h-full transition-transform duration-500"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement
-                            target.style.display = "none"
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = "none";
                           }}
                         />
                       </div>
-                    ))}
+                    ) : (
+                      sponsor.images.slice(0, 2).map((image, imgIndex) => (
+                        <div key={imgIndex} className="relative flex-1 h-full">
+                          <Image
+                            src={image || "/placeholder.svg"}
+                            alt={`${sponsor.name} ${imgIndex + 1}`}
+                            fill
+                            loading="lazy"
+                            quality={80}
+                            className=" h-fulltransition-transform duration-500"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = "none";
+                            }}
+                          />
+                        </div>
+                      ))
+                    )}
                   </div>
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
@@ -200,7 +220,9 @@ export default function WeddingSponsors() {
                     <div className="p-1.5 bg-white/80 rounded-full">
                       <Award className="h-4 w-4 text-[#c19a7f]" />
                     </div>
-                    <span className="habibi-regular text-white font-medium text-shadow">{sponsor.role}</span>
+                    <span className="habibi-regular text-white font-medium text-shadow">
+                      {sponsor.role}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -208,7 +230,8 @@ export default function WeddingSponsors() {
                 <h3
                   className="great-vibes-regular text-2xl mb-2"
                   style={{
-                    background: "linear-gradient(135deg, #c19a7f 0%, #e8b4a0 100%)",
+                    background:
+                      "linear-gradient(135deg, #c19a7f 0%, #e8b4a0 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -217,7 +240,9 @@ export default function WeddingSponsors() {
                   {sponsor.name}
                 </h3>
                 {sponsor.description && (
-                  <p className="habibi-regular text-[#8b7355] text-sm leading-relaxed">{sponsor.description}</p>
+                  <p className="habibi-regular text-[#8b7355] text-sm leading-relaxed">
+                    {sponsor.description}
+                  </p>
                 )}
               </div>
             </div>
@@ -225,8 +250,5 @@ export default function WeddingSponsors() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
-
-  
