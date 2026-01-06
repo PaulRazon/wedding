@@ -81,6 +81,13 @@ export default function WeddingSponsors() {
       images: ["/ramo.jpeg", "/ramo2.jpeg"],
       description: "Su amor florece en cada pétalo de nuestro ramo nupcial.",
     },
+    {
+      id: 4,
+      name: "Invitado Especial",
+      role: "Cumpleañero",
+      images: ["/cumpleanero.jpeg", "/cumpleanero2.jpeg"],
+      description: "Celebrando un año más de vida en nuestro día especial.",
+    },
   ];
   
 
