@@ -43,9 +43,8 @@ export default function RSVP() {
 
     const attendanceText =
       {
-        solo: "Asistiré solo/a",
-        acompanante: "Asistiré con acompañante",
-        no: "No podré asistir",
+        si: "Sí, no me lo perdería",
+        no: "Híjole, no voy a poder",
       }[formData.attendance] || formData.attendance
 
     const message = `¡Hola! Soy ${formData.name}. 
@@ -192,9 +191,8 @@ Detalles del evento:
                   <SelectValue placeholder="Selecciona una opción" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="solo">Asistiré solo/a</SelectItem>
-                  <SelectItem value="acompanante">Asistiré con acompañante</SelectItem>
-                  <SelectItem value="no">No podré asistir</SelectItem>
+                  <SelectItem value="si">Sí, no me lo perdería</SelectItem>
+                  <SelectItem value="no">Híjole, no voy a poder</SelectItem>
                 </SelectContent>
               </Select>
             </div>
