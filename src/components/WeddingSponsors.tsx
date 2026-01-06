@@ -32,6 +32,14 @@ export default function WeddingSponsors() {
       description:
         "Con su bendición, nuestros anillos simbolizan el amor eterno.",
     },
+
+    {
+      id: 2,
+      name: "Padrinos de Lazo",
+      role: "Lazo",
+      images: ["/lazo.jpeg", "/lazo2.jpeg"],
+      description: "Su guía nos une en este lazo sagrado de amor y compromiso.",
+    },
     {
       id: 3,
       name: "Madrina de Arras",
@@ -53,6 +61,15 @@ export default function WeddingSponsors() {
       images: ["/cojines.jpeg", "/cojines2.jpeg"],
       description: "Su apoyo es el soporte de nuestra unión.",
     },
+
+    {
+      id: 4,
+      name: "Padrinos de Ramo",
+      role: "Ramo",
+      images: ["/ramo.jpeg", "/ramo2.jpeg"],
+      description: "Su amor florece en cada pétalo de nuestro ramo nupcial.",
+    },
+
     {
       id: 8,
       name: "Madrina de Brindis",
@@ -67,20 +84,7 @@ export default function WeddingSponsors() {
       images: ["/musica.jpeg", "/musica2.jpeg"],
       description: "Que su alegría sea el vino que celebre nuestro amor.",
     },
-    {
-      id: 2,
-      name: "Padrinos de Lazo",
-      role: "Lazo",
-      images: ["/lazo.jpeg", "/lazo2.jpeg"],
-      description: "Su guía nos une en este lazo sagrado de amor y compromiso.",
-    },
-    {
-      id: 4,
-      name: "Padrinos de Ramo",
-      role: "Ramo",
-      images: ["/ramo.jpeg", "/ramo2.jpeg"],
-      description: "Su amor florece en cada pétalo de nuestro ramo nupcial.",
-    },
+
     {
       id: 4,
       name: "Invitado Especial",
