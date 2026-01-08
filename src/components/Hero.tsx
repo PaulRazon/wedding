@@ -37,7 +37,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
       
       {/* Floating Hearts Animation */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(6)].map((_, i) => (
           <Heart
             key={i}
@@ -51,7 +51,7 @@ export default function Hero() {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Hedgehog Decorations */}
       <HedgehogDecoration position="top-left" size="small" variant={1} className="hidden md:block" />

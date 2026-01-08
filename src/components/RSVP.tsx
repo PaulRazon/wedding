@@ -80,20 +80,7 @@ Detalles del evento:
       className="py-16 px-4 relative overflow-hidden"
      
     >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-32 right-10 w-36 h-36 rounded-full opacity-20 animate-float"
-          style={{ background: "radial-gradient(circle, #f4d9da 0%, transparent 70%)" }}
-        />
-        <div
-          className="absolute bottom-20 left-16 w-44 h-44 rounded-full opacity-15 animate-float-delayed"
-          style={{ background: "radial-gradient(circle, #e8b4a0 0%, transparent 70%)" }}
-        />
-        <div
-          className="absolute top-1/3 right-1/4 w-28 h-28 rounded-full opacity-10 animate-float-slow"
-          style={{ background: "radial-gradient(circle, #c19a7f 0%, transparent 70%)" }}
-        />
-      </div>
+      
 
       <HedgehogDecoration position="bottom-right" size="medium" variant={1} className="hidden lg:block" />
 
@@ -105,24 +92,24 @@ Detalles del evento:
           }`}
         >
           <div className="flex items-center justify-center mb-6">
-            <Mail className="h-4 w-4 mr-3" style={{ color: "#e8b4a0" }} />
-            <div className="w-12 h-px" style={{ background: "#e8b4a0" }}></div>
-            <Heart className="h-5 w-5 mx-3" style={{ color: "#e8b4a0" }} />
-            <div className="w-12 h-px" style={{ background: "#e8b4a0" }}></div>
-            <Mail className="h-4 w-4 ml-3" style={{ color: "#e8b4a0" }} />
+            <Mail className="h-4 w-4 mr-3" style={{ color: "#9dc3e6" }} />
+            <div className="w-12 h-px" style={{ background: "#9dc3e6" }}></div>
+            <Heart className="h-5 w-5 mx-3" style={{ color: "#9dc3e6" }} />
+            <div className="w-12 h-px" style={{ background: "#9dc3e6" }}></div>
+            <Mail className="h-4 w-4 ml-3" style={{ color: "#9dc3e6" }} />
           </div>
           <h2
-            className="great-vibes-regular text-3xl md:text-4xl font-light mb-4 tracking-wide"
+            className="great-vibes-regular pt-3 text-3xl md:text-4xl font-light mb-4 tracking-wide"
             style={{
-              background: "linear-gradient(135deg, #c19a7f 0%, #e8b4a0 50%, #c19a7f 100%)",
+              background: "linear-gradient(135deg, #7fb5d1 0%, #9dc3e6 50%, #7fb5d1 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              textShadow: "0 2px 8px rgba(200, 154, 127, 0.15)",
+              textShadow: "0 2px 8px rgba(127, 181, 209, 0.15)",
             }}
           >
             Confirmación RSVP
           </h2>
-          <p className="habibi-regular text-lg" style={{ color: "#a88872" }}>
+          <p className="habibi-regular text-lg" style={{ color: "#5a8aad" }}>
             Por favor confirma tu asistencia
           </p>
         </div>
@@ -135,8 +122,8 @@ Detalles del evento:
           style={{
             background: "rgba(255, 255, 255, 0.9)",
             backdropFilter: "blur(10px)",
-            border: "2px solid rgba(232, 180, 160, 0.3)",
-            boxShadow: "0 8px 32px rgba(200, 154, 127, 0.15)",
+            border: "2px solid rgba(157, 195, 230, 0.3)",
+            boxShadow: "0 8px 32px rgba(127, 181, 209, 0.15)",
           }}
         >
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -145,7 +132,7 @@ Detalles del evento:
               <label
                 htmlFor="name"
                 className="block habibi-regular text-base font-medium mb-2"
-                style={{ color: "#6b5447" }}
+                style={{ color: "#4a6b7c" }}
               >
                 Nombre completo *
               </label>
@@ -158,9 +145,9 @@ Detalles del evento:
                 required
                 className="w-full px-4 py-3 rounded-lg transition-all duration-300 habibi-regular text-base focus:outline-none focus:ring-2"
                 style={{
-                  border: "2px solid rgba(232, 180, 160, 0.3)",
-                  background: "rgba(253, 232, 233, 0.3)",
-                  color: "#6b5447",
+                  border: "2px solid rgba(157, 195, 230, 0.3)",
+                  background: "rgba(212, 235, 242, 0.3)",
+                  color: "#4a6b7c",
                 }}
                 placeholder="Tu nombre completo"
               />
@@ -171,7 +158,7 @@ Detalles del evento:
               <label
                 htmlFor="attendance"
                 className="block habibi-regular text-base font-medium mb-2"
-                style={{ color: "#6b5447" }}
+                style={{ color: "#4a6b7c" }}
               >
                 Confirmación de asistencia *
               </label>
@@ -183,9 +170,9 @@ Detalles del evento:
               >
                 <SelectTrigger
                   style={{
-                    border: "2px solid rgba(232, 180, 160, 0.3)",
-                    background: "rgba(253, 232, 233, 0.3)",
-                    color: "#6b5447",
+                    border: "2px solid rgba(157, 195, 230, 0.3)",
+                    background: "rgba(212, 235, 242, 0.3)",
+                    color: "#4a6b7c",
                   }}
                 >
                   <SelectValue placeholder="Selecciona una opción" />
@@ -202,7 +189,7 @@ Detalles del evento:
               <label
                 htmlFor="message"
                 className="block habibi-regular text-base font-medium mb-2"
-                style={{ color: "#6b5447" }}
+                style={{ color: "#4a6b7c" }}
               >
                 Mensaje (opcional)
               </label>
@@ -214,9 +201,9 @@ Detalles del evento:
                 rows={4}
                 className="w-full px-4 py-3 rounded-lg transition-all duration-300 habibi-regular text-base resize-none focus:outline-none focus:ring-2"
                 style={{
-                  border: "2px solid rgba(232, 180, 160, 0.3)",
-                  background: "rgba(253, 232, 233, 0.3)",
-                  color: "#6b5447",
+                  border: "2px solid rgba(157, 195, 230, 0.3)",
+                  background: "rgba(212, 235, 242, 0.3)",
+                  color: "#4a6b7c",
                 }}
                 placeholder="Escribe un mensaje especial para los novios..."
               />
@@ -228,9 +215,9 @@ Detalles del evento:
                 type="submit"
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-full habibi-regular text-base font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 style={{
-                  background: "linear-gradient(135deg, #e8b4a0 0%, #d4a088 100%)",
+                  background: "linear-gradient(135deg, #9dc3e6 0%, #7fb5d1 100%)",
                   color: "#ffffff",
-                  boxShadow: "0 4px 16px rgba(232, 180, 160, 0.3)",
+                  boxShadow: "0 4px 16px rgba(157, 195, 230, 0.3)",
                 }}
               >
                 <MessageCircle className="h-5 w-5" />
@@ -242,9 +229,9 @@ Detalles del evento:
             {/* Info Text */}
             <div
               className="text-center pt-4 rounded-lg p-3"
-              style={{ borderTop: "2px solid rgba(232, 180, 160, 0.3)" }}
+              style={{ borderTop: "2px solid rgba(157, 195, 230, 0.3)" }}
             >
-              <p className="habibi-regular text-sm" style={{ color: "#a88872" }}>
+              <p className="habibi-regular text-sm" style={{ color: "#5a8aad" }}>
                 Tu confirmación se enviará directamente por WhatsApp a los novios
               </p>
             </div>

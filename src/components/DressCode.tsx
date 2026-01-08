@@ -37,12 +37,12 @@ export default function DressCode() {
     <section
       ref={sectionRef}
       id="vestimenta"
-      className="py-20 px-4 bg-gradient-to-br from-[#f5f1eb] via-[#fef4ed] to-[#fde8e9] relative overflow-hidden"
+      className="py-20 px-4 bg-[#eae4cc]  relative overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-[#f4d5c6]/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#e8c5b5]/30 rounded-full blur-3xl animate-float-delayed"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-[#fde8e9]/40 rounded-full blur-2xl animate-bounce-slow"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#b8d8ea]/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#9dc3e6]/30 rounded-full blur-3xl animate-float-delayed"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-[#c3e5f3]/40 rounded-full blur-2xl animate-bounce-slow"></div>
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
@@ -52,13 +52,13 @@ export default function DressCode() {
           }`}
         >
           <div className="flex items-center justify-center mb-6" aria-hidden="true">
-            <Sparkles className="h-4 w-4 text-[#e8b4a0] mr-3 animate-pulse" />
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent"></div>
-            <Heart className="h-6 w-6 text-[#d4a89a] mx-3 animate-bounce-slow" />
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent"></div>
-            <Sparkles className="h-4 w-4 text-[#e8b4a0] ml-3 animate-pulse" style={{ animationDelay: "0.5s" }} />
+            <Sparkles className="h-4 w-4 text-[#9dc3e6] mr-3 animate-pulse" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9dc3e6] to-transparent"></div>
+            <Heart className="h-6 w-6 text-[#7fb5d1] mx-3 animate-bounce-slow" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9dc3e6] to-transparent"></div>
+            <Sparkles className="h-4 w-4 text-[#9dc3e6] ml-3 animate-pulse" style={{ animationDelay: "0.5s" }} />
           </div>
-          <h2 className="great-vibes-regular text-5xl md:text-6xl pt-1 font-light bg-gradient-to-r from-[#c19a7f] via-[#e8b4a0] to-[#f5c7c1] bg-clip-text text-transparent mb-6 tracking-wide drop-shadow-lg">
+          <h2 className="great-vibes-regular text-5xl md:text-6xl py-1 font-light mb-6 tracking-wide text-[#6b5d54] drop-shadow-lg">
             Código de vestimenta
           </h2>
           <p className="habibi-regular text-lg text-[#5a4a3a] max-w-3xl mx-auto leading-relaxed mb-4">
@@ -72,12 +72,12 @@ export default function DressCode() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div
-            className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#f4d5c6]/60 shadow-2xl shadow-[#e8b4a0]/20 transition-all duration-1000 delay-200 hover:shadow-3xl hover:scale-[1.02] ${
+            className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#b8d8ea]/60 shadow-2xl shadow-[#9dc3e6]/20 transition-all duration-1000 delay-200 hover:shadow-3xl hover:scale-[1.02] ${
               isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
             }`}
           >
             <div className="mb-6 text-center">
-              <h3 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-4">Mujeres</h3>
+              <h3 className="great-vibes-regular text-4xl font-medium text-[#5a8aad] mb-4">Mujeres</h3>
               <p className="habibi-regular text-base text-[#5a4a3a]">
                 Te sugerimos usar tonos pastel en amarillo, verde, rosa, lila, anaranjado o gris.
               </p>
@@ -105,14 +105,14 @@ export default function DressCode() {
           </div>
 
           <div
-            className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#f4d5c6]/60 shadow-2xl shadow-[#e8b4a0]/20 transition-all duration-1000 delay-300 hover:shadow-3xl hover:scale-[1.02] ${
+            className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#b8d8ea]/60 shadow-2xl shadow-[#9dc3e6]/20 transition-all duration-1000 delay-300 hover:shadow-3xl hover:scale-[1.02] ${
               isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
             }`}
           >
             <div className="text-center">
-              <h3 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-6">Hombres</h3>
+              <h3 className="great-vibes-regular text-4xl font-medium text-[#5a8aad] mb-6">Hombres</h3>
 
-              <div className="flex items-start gap-3 bg-[#fef4ed]/60 rounded-lg p-6 border-2 border-[#f4d5c6]">
+              <div className="flex items-start gap-3 bg-[#f0f8fc]/60 rounded-lg p-6 border-2 border-[#b8d8ea]">
                 <Ban className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
                 <div className="text-left">
                   <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed">
@@ -126,23 +126,23 @@ export default function DressCode() {
         </div>
 
         <div
-          className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#f4d5c6]/60 shadow-2xl shadow-[#e8b4a0]/20 transition-all duration-1000 delay-400 mb-8 hover:shadow-3xl hover:scale-[1.02] ${
+          className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#b8d8ea]/60 shadow-2xl shadow-[#9dc3e6]/20 transition-all duration-1000 delay-400 mb-8 hover:shadow-3xl hover:scale-[1.02] ${
             isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
           }`}
         >
           <div className="flex flex-col items-center text-center gap-4">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#e8b4a0] to-[#d4a89a] rounded-full blur-xl opacity-40 animate-pulse"></div>
-              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-[#fef4ed] to-[#fde8e9] flex items-center justify-center flex-shrink-0 shadow-md">
-                <Clock className="h-8 w-8 text-[#c19a7f]" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#9dc3e6] to-[#7fb5d1] rounded-full blur-xl opacity-40 animate-pulse"></div>
+              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-[#f0f8fc] to-[#e8f3f8] flex items-center justify-center flex-shrink-0 shadow-md">
+                <Clock className="h-8 w-8 text-[#5a8aad]" />
               </div>
             </div>
             <div>
-              <h4 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-4">Llega puntual</h4>
+              <h4 className="great-vibes-regular text-4xl font-medium text-[#5a8aad] mb-4">Llega puntual</h4>
               <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed max-w-3xl mx-auto">
-                Elegimos un horario con la luz más bonita para capturar momentos inolvidables a la luz del atardecer.
+               Elegimos un horario con la luz más bonita para capturar momentos inolvidables a la luz del atardecer.
               </p>
-              <p className="great-vibes-regular text-2xl text-[#c19a7f] mt-3">
+              <p className="great-vibes-regular text-2xl text-[#5a8aad] mt-3">
                 Llegar temprano será parte de la magia.
               </p>
             </div>
@@ -150,19 +150,19 @@ export default function DressCode() {
         </div>
 
         <div
-          className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#f4d5c6]/60 shadow-2xl shadow-[#e8b4a0]/20 transition-all duration-1000 delay-500 hover:shadow-3xl hover:scale-[1.02] ${
+          className={`bg-white/90 backdrop-blur-md rounded-3xl p-8 border-2 border-[#b8d8ea]/60 shadow-2xl shadow-[#9dc3e6]/20 transition-all duration-1000 delay-500 hover:shadow-3xl hover:scale-[1.02] ${
             isVisible ? "animate-fade-in-up opacity-100" : "opacity-0"
           }`}
         >
           <div className="flex flex-col items-center text-center gap-4">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#e8b4a0] to-[#d4a89a] rounded-full blur-xl opacity-40 animate-pulse"></div>
-              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-[#fef4ed] to-[#fde8e9] flex items-center justify-center flex-shrink-0 shadow-md">
-                <Camera className="h-8 w-8 text-[#c19a7f]" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#9dc3e6] to-[#7fb5d1] rounded-full blur-xl opacity-40 animate-pulse"></div>
+              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-[#f0f8fc] to-[#e8f3f8] flex items-center justify-center flex-shrink-0 shadow-md">
+                <Camera className="h-8 w-8 text-[#5a8aad]" />
               </div>
             </div>
             <div>
-              <h4 className="great-vibes-regular text-4xl font-medium text-[#c19a7f] mb-4">Momentos mágicos</h4>
+              <h4 className="great-vibes-regular text-4xl font-medium text-[#5a8aad] mb-4">Momentos mágicos</h4>
               <p className="habibi-regular text-base text-[#5a4a3a] leading-relaxed max-w-3xl mx-auto mb-4">
                 Nos llenaría el alma que capturen momentos desde su mirada. Si deciden grabar o tomar fotos, sólo
                 háganlo sin obstruir el trabajo del fotógrafo.

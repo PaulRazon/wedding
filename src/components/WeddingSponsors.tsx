@@ -1,27 +1,28 @@
-"use client";
 
-import { useEffect, useRef, useState } from "react";
-import { Heart, Sparkles, Award, Users } from "lucide-react";
-import Image from "next/image";
+"use client"
+
+import { useEffect, useRef, useState } from "react"
+import { Heart, Sparkles, Award, Users } from "lucide-react"
+import Image from "next/image"
 
 interface Sponsor {
-  id: number;
-  sponsor: string;
-  name: string;
-  role: string;
-  images: string[]; // Changed from single image to array
-  description?: string;
+  id: number
+  sponsor: string
+  name: string
+  role: string
+  images: string[]
+  description?: string
 }
 
 export default function WeddingSponsors() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
 
   const sponsors: Sponsor[] = [
     {
       id: 9,
       name: "Padrinos de Velación",
-      sponsor:"Rosy Jara & Ángel Ramírez",
+      sponsor: "Rosy Jara & Ángel Ramírez",
       role: "Velación",
       images: ["/velacion.jpeg", "/velacion2.jpeg"],
       description: "Luz y guía en nuestro camino juntos.",
@@ -29,17 +30,15 @@ export default function WeddingSponsors() {
     {
       id: 1,
       name: "Padrinos de Anillo",
-      sponsor:"Lulu Machain & Samuel López",
+      sponsor: "Lulu Machain & Samuel López",
       role: "Anillos",
       images: ["/anillos.jpeg", "/anillos2.jpeg"],
-      description:
-        "Con su bendición, nuestros anillos simbolizan el amor eterno.",
+      description: "Con su bendición, nuestros anillos simbolizan el amor eterno.",
     },
-
     {
       id: 2,
       name: "Padrinos de Lazo",
-      sponsor:"María Jara & Hugo Navarro",
+      sponsor: "María Jara & Hugo Navarro",
       role: "Lazo",
       images: ["/lazo.jpeg", "/lazo2.jpeg"],
       description: "Su guía nos une en este lazo sagrado de amor y compromiso.",
@@ -47,7 +46,7 @@ export default function WeddingSponsors() {
     {
       id: 3,
       name: "Madrina de Arras",
-      sponsor:"Cuca Jara",
+      sponsor: "Cuca Jara",
       role: "Arras",
       images: ["/arras.jpeg", "/arras2.jpeg"],
       description: "Su generosidad es el fundamento de nuestro nuevo hogar.",
@@ -55,7 +54,7 @@ export default function WeddingSponsors() {
     {
       id: 5,
       name: "Padrino de Biblia",
-      sponsor:"Chuy Jara",
+      sponsor: "Chuy Jara",
       role: "Biblia",
       images: ["/biblia.jpeg", "/biblia2.jpeg"],
       description: "Su fe nos guía en este camino de bendición.",
@@ -63,25 +62,23 @@ export default function WeddingSponsors() {
     {
       id: 6,
       name: "Padrinos de Cojines",
-      sponsor:"Isabel López & Chendo Machain",
+      sponsor: "Isabel López & Chendo Machain",
       role: "Cojines",
       images: ["/cojines.jpeg", "/cojines2.jpeg"],
       description: "Su apoyo es el soporte de nuestra unión.",
     },
-
     {
       id: 4,
       name: "Padrinos de Ramo",
-      sponsor:"Andrea Pérez & Alex Ramírez",
+      sponsor: "Andrea Pérez & Alex Ramírez",
       role: "Ramo",
       images: ["/ramo.jpeg", "/ramo2.jpeg"],
       description: "Su amor florece en cada pétalo de nuestro ramo nupcial.",
     },
-
     {
       id: 8,
       name: "Madrina de Brindis",
-      sponsor:"Fer González",
+      sponsor: "Fer González",
       role: "Brindis",
       images: ["/brindis.jpeg", "/brindis2.jpeg"],
       description: "Su cariño será recordado en cada detalle.",
@@ -89,84 +86,69 @@ export default function WeddingSponsors() {
     {
       id: 7,
       name: "Padrino de Musica",
-      sponsor:"Carlos Razón",
+      sponsor: "Carlos Razón",
       role: "Musica",
       images: ["/musica.jpeg", "/musica2.jpeg"],
       description: "Que su alegría sea el vino que celebre nuestro amor.",
     },
-
     {
-      id: 4,
+      id: 10,
       name: "Invitado Especial",
-      sponsor:"Fabito",
+      sponsor: "Fabito",
       role: "Cumpleañero",
       images: ["/cumpleanero.jpeg"],
       description: "Celebrando un año más de vida en nuestro día especial.",
     },
-  ];
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setIsVisible(true)
         }
       },
-      { threshold: 0.3 }
-    );
+      { threshold: 0.3 },
+    )
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+      observer.observe(sectionRef.current)
     }
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <section
       ref={sectionRef}
       id="padrinos"
       className="py-16 px-4 relative overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(135deg, #fefbf8 0%, #f5f1eb 50%, #fef5f1 100%)",
-      }}
+    
     >
-      <div className="absolute top-20 left-10 w-32 h-32 bg-[#e8b4a0]/20 rounded-full blur-3xl animate-pulse"></div>
-      <div
-        className="absolute bottom-40 right-10 w-40 h-40 bg-[#f4d9da]/30 rounded-full blur-3xl animate-pulse"
-        style={{ animationDelay: "1s" }}
-      ></div>
-      <div
-        className="absolute top-1/2 left-1/4 w-24 h-24 bg-[#c19a7f]/10 rounded-full blur-2xl animate-pulse"
-        style={{ animationDelay: "2s" }}
-      ></div>
+      
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div
-          className={`text-center mb-12 transition-all duration-1000 animate-fade-in-up opacity-100`}
-        >
+        <div className={`text-center mb-12 transition-all duration-1000 animate-fade-in-up opacity-100`}>
           <div className="flex items-center justify-center mb-6">
-            <Heart className="h-4 w-4 text-[#e8b4a0] mr-3" />
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent"></div>
-            <Sparkles className="h-5 w-5 text-[#c19a7f] mx-3 animate-pulse" />
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent"></div>
-            <Heart className="h-4 w-4 text-[#e8b4a0] ml-3" />
+            <Heart className="h-4 w-4 text-[#9dc3e6] mr-3" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9dc3e6] to-transparent"></div>
+            <Sparkles className="h-5 w-5 text-[#7fb5d1] mx-3 animate-pulse" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#9dc3e6] to-transparent"></div>
+            <Heart className="h-4 w-4 text-[#9dc3e6] ml-3" />
           </div>
           <h2
-            className="great-vibes-regular text-4xl md:text-5xl font-light mb-4 tracking-wide"
+            className="great-vibes-regular pt-3 text-4xl md:text-5xl font-light mb-4 tracking-wide"
             style={{
-              background:
-                "linear-gradient(135deg, #c19a7f 0%, #e8b4a0 50%, #a88872 100%)",
+              background: "linear-gradient(135deg, #7fb5d1 0%, #9dc3e6 50%, #5a8aad 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              textShadow: "0 2px 4px rgba(225, 180, 160, 0.1)",
+              textShadow: "0 2px 4px rgba(157, 195, 230, 0.1)",
             }}
           >
             Nuestros Padrinos
           </h2>
-          <p className="habibi-regular text-lg text-[#8b7355]">
+          <p className="habibi-regular text-lg text-[#5a8aad]">
             Personas especiales que nos acompañan en este día tan importante
           </p>
         </div>
@@ -177,12 +159,12 @@ export default function WeddingSponsors() {
           {sponsors.map((sponsor, index) => (
             <div
               key={sponsor.id}
-              className="group bg-white/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[#e8b4a0]/30"
+              className="group bg-white/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[#9dc3e6]/30"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
             >
-              <div className="relative h-58 md:h-50 bg-gradient-to-br from-[#f5f1eb] via-[#fef5f1] to-[#e8b4a0]/20 overflow-hidden">
+              <div className="relative h-58 md:h-50 bg-gradient-to-br from-[#e8f4f8] via-[#f0f8fb] to-[#9dc3e6]/20 overflow-hidden">
                 {sponsor.images && sponsor.images.length > 0 ? (
                   <div className="flex h-full w-full gap-1">
                     {sponsor.images.length === 1 ? (
@@ -195,8 +177,8 @@ export default function WeddingSponsors() {
                           quality={80}
                           className="object-cover h-full transition-transform duration-500"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = "none";
+                            const target = e.target as HTMLImageElement
+                            target.style.display = "none"
                           }}
                         />
                       </div>
@@ -209,10 +191,10 @@ export default function WeddingSponsors() {
                             fill
                             loading="lazy"
                             quality={80}
-                            className=" h-fulltransition-transform duration-500"
+                            className="object-cover h-full transition-transform duration-500"
                             onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = "none";
+                              const target = e.target as HTMLImageElement
+                              target.style.display = "none"
                             }}
                           />
                         </div>
@@ -221,32 +203,29 @@ export default function WeddingSponsors() {
                   </div>
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
-                    <Users className="h-16 w-16 text-[#e8b4a0]/40" />
+                    <Users className="h-16 w-16 text-[#9dc3e6]/40" />
                   </div>
                 )}
                 <div
                   className="absolute bottom-0 left-0 right-0 p-4"
                   style={{
                     background:
-                      "linear-gradient(to top, rgba(232, 180, 160, 0.8) 0%, rgba(232, 180, 160, 0.4) 50%, transparent 100%)",
+                      "linear-gradient(to top, rgba(157, 195, 230, 0.8) 0%, rgba(157, 195, 230, 0.4) 50%, transparent 100%)",
                   }}
                 >
                   <div className="flex items-center gap-2">
                     <div className="p-1.5 bg-white/80 rounded-full">
-                      <Award className="h-4 w-4 text-[#c19a7f]" />
+                      <Award className="h-4 w-4 text-[#7fb5d1]" />
                     </div>
-                    <span className="habibi-regular text-white font-medium text-shadow">
-                      {sponsor.role}
-                    </span>
+                    <span className="habibi-regular text-white font-medium text-shadow">{sponsor.role}</span>
                   </div>
                 </div>
               </div>
-              <div className="p-6 bg-gradient-to-b from-[#fefbf8] to-white/80">
+              <div className="p-6 bg-gradient-to-b from-[#f5fbfd] to-white/80">
                 <h3
                   className="great-vibes-regular text-2xl mb-2"
                   style={{
-                    background:
-                      "linear-gradient(135deg, #c19a7f 0%, #e8b4a0 100%)",
+                    background: "linear-gradient(135deg, #7fb5d1 0%, #9dc3e6 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -254,11 +233,9 @@ export default function WeddingSponsors() {
                 >
                   {sponsor.name}
                 </h3>
-                <h4 className="habibi-regular text-[#8b7355] mb-4 italic">{sponsor.sponsor}</h4>
+                <h4 className="habibi-regular text-[#5a8aad] mb-4 italic">{sponsor.sponsor}</h4>
                 {sponsor.description && (
-                  <p className="habibi-regular text-[#8b7355] text-sm leading-relaxed">
-                    {sponsor.description}
-                  </p>
+                  <p className="habibi-regular text-[#5a8aad] text-sm leading-relaxed">{sponsor.description}</p>
                 )}
               </div>
             </div>
@@ -266,5 +243,5 @@ export default function WeddingSponsors() {
         </div>
       </div>
     </section>
-  );
+  )
 }

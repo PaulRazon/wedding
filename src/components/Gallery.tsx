@@ -6,12 +6,13 @@ import Image from "next/image"
 
 // Sample image data with different aspect ratios for the masonry effect
 const images = [
-  { id: 1, src: "/resource-photo-1.jpg", aspect: "aspect-[3/4]" },
-  { id: 2, src: "/resource-photo-2.jpg", aspect: "aspect-[4/3]" },
-  { id: 3, src: "/resource-photo-3.jpg", aspect: "aspect-square" },
-  { id: 4, src: "/resource-photo-4.jpg", aspect: "aspect-[5/4]" },
-  { id: 5, src: "/resource-photo-5.jpg", aspect: "aspect-[3/4]" },
-  { id: 6, src: "/resource-photo-6.jpg", aspect: "aspect-[4/5]" },
+  { id: 1, src: "/resource-photo-6.jpg", aspect: "aspect-[3/4]" },
+  { id: 2, src: "/resource-photo-8.jpg", aspect: "aspect-[4/3]" },
+  { id: 3, src: "/resource-photo-9.jpg", aspect: "aspect-square" },
+  { id: 4, src: "/resource-photo-10.jpg", aspect: "aspect-[5/4]" },
+  { id: 5, src: "/resource-photo-11.jpg", aspect: "aspect-[3/4]" },
+  { id: 6, src: "/resource-photo-12.jpg", aspect: "aspect-[4/5]" },
+  { id: 7, src: "/resource-photo-5.jpg", aspect: "aspect-[3/4]" },
 ]
 
 // Shuffle the images for a more dynamic layout
@@ -63,15 +64,15 @@ export default function Gallery() {
           }`}
         >
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#e8b4a0] to-[#e8b4a0]"></div>
-            <Camera className="w-6 h-6 text-[#e8b4a0] animate-pulse" />
-            <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#e8b4a0] to-[#e8b4a0]"></div>
+            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#5a8aad] to-[#5a8aad]"></div>
+            <Camera className="w-6 h-6 text-[#5a8aad] animate-pulse" />
+            <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#5a8aad] to-[#5a8aad]"></div>
           </div>
 
-          <h2 className="great-vibes-regular text-6xl md:text-7xl font-light text-[#6b5d54] dark:text-[#e8dfd5] mb-4 tracking-wide drop-shadow-md">
+          <h2 className="great-vibes-regular text-6xl md:text-7xl font-light text-[#5a8aad] mb-4 tracking-wide drop-shadow-md">
             Galería
           </h2>
-          <p className="habibi-regular text-lg text-[#a88872] dark:text-[#c7b299] max-w-2xl mx-auto">
+          <p className="habibi-regular text-lg text-[#a88872] max-w-2xl mx-auto">
             Momentos especiales que hemos compartido juntos
           </p>
         </div>
@@ -86,32 +87,30 @@ export default function Gallery() {
             {shuffledImages.map((image) => (
               <div
                 key={image.id}
-                className={`relative group break-inside-avoid mb-4 md:mb-6 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#e8b4a0]/30 ${image.aspect}`}
+                className={`relative group break-inside-avoid mb-4 md:mb-6 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#5a8aad]/30 ${image.aspect}`}
               >
-                <div className="relative w-full h-full">
-                  <Image
-                    loading="lazy"
-                    src={image.src || "/placeholder.svg"}
-                    alt={`Wedding photo ${image.id}`}
-                    fill
-                    quality={80}
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement
-                      target.style.display = "none"
-                      const parent = target.parentElement
-                      if (parent) {
-                        parent.style.background = "linear-gradient(135deg, #f5f1eb 0%, #e8b4a0 50%, #c19a7f 100%)"
-                        parent.classList.add("flex", "items-center", "justify-center")
-                      }
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#6b5d54]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <Heart className="w-5 h-5 mb-1 fill-[#f4d9da]" />
-                      <span className="text-sm font-medium habibi-regular">Nuestro momento</span>
-                    </div>
+                <Image
+                  loading="lazy"
+                  src={image.src || "/placeholder.svg"}
+                  alt={`Wedding photo ${image.id}`}
+                  fill
+                  quality={80}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    const parent = target.parentElement;
+                    if (parent) {
+                      target.style.display = "none";
+                      parent.style.background = "linear-gradient(135deg, #f5f1eb 0%, #e8b4a0 50%, #c19a7f 100%)";
+                      parent.classList.add("flex", "items-center", "justify-center");
+                    }
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#6b5d54]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <Heart className="w-5 h-5 mb-1 fill-[#f4d9da]" />
+                    <span className="text-sm font-medium habibi-regular">Nuestro momento</span>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Clock, MapPin, Music, Utensils, Sparkles, PartyPopper } from "lucide-react"
+import { Clock, MapPin, Music, Utensils, Sparkles, PartyPopper, ConciergeBell } from "lucide-react"
 import HedgehogDecoration from "./HedgehogDecoration"
 
 export default function Reception() {
@@ -32,20 +32,7 @@ export default function Reception() {
       className="py-16 px-4 relative overflow-hidden"
       
     >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-20 left-10 w-32 h-32 rounded-full opacity-20 animate-float"
-          style={{ background: "radial-gradient(circle, #e8b4a0 0%, transparent 70%)" }}
-        />
-        <div
-          className="absolute bottom-32 right-20 w-40 h-40 rounded-full opacity-15 animate-float-delayed"
-          style={{ background: "radial-gradient(circle, #f4d9da 0%, transparent 70%)" }}
-        />
-        <div
-          className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full opacity-10 animate-float-slow"
-          style={{ background: "radial-gradient(circle, #c19a7f 0%, transparent 70%)" }}
-        />
-      </div>
+ 
 
       <HedgehogDecoration position="bottom-left" size="medium" variant={1} className="hidden lg:block" />
 
@@ -57,24 +44,24 @@ export default function Reception() {
           }`}
         >
           <div className="flex items-center justify-center mb-6">
-            <PartyPopper className="h-4 w-4 mr-3" style={{ color: "#e8b4a0" }} />
-            <div className="w-12 h-px" style={{ background: "#e8b4a0" }}></div>
-            <Sparkles className="h-5 w-5 mx-3" style={{ color: "#e8b4a0" }} />
-            <div className="w-12 h-px" style={{ background: "#e8b4a0" }}></div>
-            <PartyPopper className="h-4 w-4 ml-3" style={{ color: "#e8b4a0" }} />
+            <PartyPopper className="h-4 w-4 mr-3" style={{ color: "#9dc3e6" }} />
+            <div className="w-12 h-px" style={{ background: "#9dc3e6" }}></div>
+            <Sparkles className="h-5 w-5 mx-3" style={{ color: "#9dc3e6" }} />
+            <div className="w-12 h-px" style={{ background: "#9dc3e6" }}></div>
+            <PartyPopper className="h-4 w-4 ml-3" style={{ color: "#9dc3e6" }} />
           </div>
           <h2
             className="great-vibes-regular text-3xl md:text-4xl font-light mb-4 tracking-wide"
             style={{
-              background: "linear-gradient(135deg, #c19a7f 0%, #e8b4a0 50%, #c19a7f 100%)",
+              background: "linear-gradient(135deg, #7fb5d1 0%, #9dc3e6 50%, #7fb5d1 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              textShadow: "0 2px 8px rgba(200, 154, 127, 0.15)",
+              textShadow: "0 2px 8px rgba(127, 181, 209, 0.15)",
             }}
           >
             Recepción
           </h2>
-          <p className="habibi-regular text-lg" style={{ color: "#a88872" }}>
+          <p className="habibi-regular text-lg" style={{ color: "#5a8aad" }}>
             Celebremos juntos
           </p>
         </div>
@@ -87,14 +74,14 @@ export default function Reception() {
           style={{
             background: "rgba(255, 255, 255, 0.85)",
             backdropFilter: "blur(10px)",
-            border: "2px solid rgba(232, 180, 160, 0.3)",
-            boxShadow: "0 8px 32px rgba(200, 154, 127, 0.15)",
+            border: "2px solid rgba(157, 195, 230, 0.3)",
+            boxShadow: "0 8px 32px rgba(127, 181, 209, 0.15)",
           }}
         >
           <div
             className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             style={{
-              background: "radial-gradient(circle at top right, rgba(232, 180, 160, 0.1) 0%, transparent 60%)",
+              background: "radial-gradient(circle at top right, rgba(157, 195, 230, 0.1) 0%, transparent 60%)",
             }}
           />
 
@@ -102,16 +89,16 @@ export default function Reception() {
             <div className="relative inline-flex items-center justify-center">
               <div
                 className="absolute inset-0 rounded-full animate-pulse"
-                style={{ background: "radial-gradient(circle, rgba(232, 180, 160, 0.3) 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, rgba(157, 195, 230, 0.3) 0%, transparent 70%)" }}
               />
               <div
                 className="w-20 h-20 rounded-full flex items-center justify-center relative"
                 style={{
-                  background: "linear-gradient(135deg, #fde8e9 0%, #f4d9da 100%)",
-                  boxShadow: "0 4px 16px rgba(232, 180, 160, 0.25)",
+                  background: "linear-gradient(135deg, #d4ebf2 0%, #b8d8ea 100%)",
+                  boxShadow: "0 4px 16px rgba(157, 195, 230, 0.25)",
                 }}
               >
-                <Utensils className="h-10 w-10" style={{ color: "#c19a7f" }} />
+                <ConciergeBell className="h-10 w-10" style={{ color: "#7fb5d1" }} />
               </div>
             </div>
 
@@ -119,11 +106,11 @@ export default function Reception() {
               <div className="flex items-center justify-center gap-4 group/item hover:scale-105 transition-transform duration-300">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, #fde8e9 0%, #f4d9da 100%)" }}
+                  style={{ background: "linear-gradient(135deg, #d4ebf2 0%, #b8d8ea 100%)" }}
                 >
-                  <Clock className="h-5 w-5" style={{ color: "#e8b4a0" }} />
+                  <Clock className="h-5 w-5" style={{ color: "#9dc3e6" }} />
                 </div>
-                <span className="habibi-regular text-lg" style={{ color: "#6b5447" }}>
+                <span className="habibi-regular text-lg" style={{ color: "#4a6b7c" }}>
                   5:30 PM
                 </span>
               </div>
@@ -131,11 +118,11 @@ export default function Reception() {
               <div className="flex items-center justify-center gap-4 group/item hover:scale-105 transition-transform duration-300">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, #fde8e9 0%, #f4d9da 100%)" }}
+                  style={{ background: "linear-gradient(135deg, #d4ebf2 0%, #b8d8ea 100%)" }}
                 >
-                  <MapPin className="h-5 w-5" style={{ color: "#e8b4a0" }} />
+                  <MapPin className="h-5 w-5" style={{ color: "#9dc3e6" }} />
                 </div>
-                <span className="habibi-regular text-lg" style={{ color: "#6b5447" }}>
+                <span className="habibi-regular text-lg" style={{ color: "#4a6b7c" }}>
                   La Muralla Jardín Campestre
                 </span>
               </div>
@@ -143,11 +130,11 @@ export default function Reception() {
               <div className="flex items-center justify-center gap-4 group/item hover:scale-105 transition-transform duration-300">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, #fde8e9 0%, #f4d9da 100%)" }}
+                  style={{ background: "linear-gradient(135deg, #d4ebf2 0%, #b8d8ea 100%)" }}
                 >
-                  <Music className="h-5 w-5" style={{ color: "#e8b4a0" }} />
+                  <Music className="h-5 w-5" style={{ color: "#9dc3e6" }} />
                 </div>
-                <span className="habibi-regular text-lg" style={{ color: "#6b5447" }}>
+                <span className="habibi-regular text-lg" style={{ color: "#4a6b7c" }}>
                   Música, baile y celebración
                 </span>
               </div>
@@ -156,11 +143,11 @@ export default function Reception() {
             <div
               className="pt-6 rounded-xl p-4"
               style={{
-                borderTop: "2px solid rgba(232, 180, 160, 0.3)",
-                background: "linear-gradient(to bottom, transparent 0%, rgba(253, 232, 233, 0.3) 100%)",
+                borderTop: "2px solid rgba(157, 195, 230, 0.3)",
+                background: "linear-gradient(to bottom, transparent 0%, rgba(212, 235, 242, 0.3) 100%)",
               }}
             >
-              <p className="habibi-regular text-base mb-3" style={{ color: "#a88872" }}>
+              <p className="habibi-regular text-base mb-3" style={{ color: "#5a8aad" }}>
                 Carretera al aeropuerto km. 2.5, Pantanal, Xalisco
               </p>
               <a
@@ -169,9 +156,9 @@ export default function Reception() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 habibi-regular text-sm px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 style={{
-                  color: "#c19a7f",
-                  background: "linear-gradient(135deg, #fde8e9 0%, #f4d9da 100%)",
-                  border: "1px solid rgba(232, 180, 160, 0.4)",
+                  color: "#7fb5d1",
+                  background: "linear-gradient(135deg, #d4ebf2 0%, #b8d8ea 100%)",
+                  border: "1px solid rgba(157, 195, 230, 0.4)",
                 }}
               >
                 <MapPin className="h-4 w-4" />

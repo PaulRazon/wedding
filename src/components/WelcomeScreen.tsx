@@ -4,6 +4,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Lock } from 'lucide-react';
 import Image from 'next/image';
+import confetti from 'canvas-confetti';
 
 interface WelcomeScreenProps {
   onOpenInvitation: () => void;
@@ -19,13 +20,73 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
     if (isOpening) return;
     
     setIsOpening(true);
-    try {
-      // Add a small delay for better UX
-      await new Promise(resolve => setTimeout(resolve, 1200));
-      onOpenInvitation();
-    } finally {
-      setIsOpening(false);
+
+    // Initial big confetti burst
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#F5F1EB', '#E8DDD4', '#D4C4B0', '#C7B299', '#A69080', '#ffd700'],
+      zIndex: 9999
+    });
+
+    // Heart-shaped confetti burst
+    setTimeout(() => {
+      confetti({
+        particleCount: 50,
+        spread: 55,
+        origin: { y: 0.55 },
+        colors: ['#D4C4B0', '#C7B299', '#E8DDD4', '#F5F1EB'],
+        shapes: ['circle'],
+        scalar: 1.5,
+        zIndex: 9999
+      });
+    }, 200);
+
+    // Confetti explosion
+    const duration = 3000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+    function randomInRange(min: number, max: number) {
+      return Math.random() * (max - min) + min;
     }
+
+    const interval: NodeJS.Timeout = setInterval(function() {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        clearInterval(interval);
+        setTimeout(() => {
+          onOpenInvitation();
+          setIsOpening(false);
+        }, 500);
+        return;
+      }
+
+      const particleCount = 50 * (timeLeft / duration);
+      
+      // Wedding colors confetti - Left side
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        colors: ['#F5F1EB', '#E8DDD4', '#D4C4B0', '#C7B299', '#A69080', '#ffd700'],
+        shapes: ['square', 'circle'],
+        scalar: randomInRange(0.8, 1.2)
+      });
+      
+      // Wedding colors confetti - Right side
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        colors: ['#F5F1EB', '#E8DDD4', '#D4C4B0', '#C7B299', '#A69080', '#ffd700'],
+        shapes: ['square', 'circle'],
+        scalar: randomInRange(0.8, 1.2)
+      });
+
+    }, 250);
   }, [isOpening, onOpenInvitation]);
 
   // Add intersection observer for animations

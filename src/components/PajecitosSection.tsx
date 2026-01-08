@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Flower2, Wine, Mail } from "lucide-react"
-import Image from "next/image"
+import { Flower2, Wine, Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function PajecitosSection() {
   return (
@@ -18,11 +18,11 @@ export default function PajecitosSection() {
         <div className="mb-12 text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 shadow-lg">
             <Image
-                src={"/wedding-card.png"}
-                alt="Flower Icon"
-                width={32}
-                height={32}
-                 />
+              src={"/wedding-card.png"}
+              alt="Flower Icon"
+              width={32}
+              height={32}
+            />
           </div>
           <h3
             className="text-4xl font-serif text-[#8b7355] mb-6"
@@ -47,11 +47,11 @@ export default function PajecitosSection() {
         {/* Pajes */}
         <div className="mb-12 text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 shadow-lg">
-            <Image 
-                src={"/decoration.png"}
-                alt="Decoration Icon"
-                width={32}
-                height={32}
+            <Image
+              src={"/decoration.png"}
+              alt="Decoration Icon"
+              width={32}
+              height={32}
             />
           </div>
           <h3
@@ -77,10 +77,10 @@ export default function PajecitosSection() {
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 shadow-lg">
             <Image
-                src={"/wedding-invitation.png"}
-                alt="Hedgehog Icon"
-                width={32}
-                height={32}
+              src={"/wedding-invitation.png"}
+              alt="Hedgehog Icon"
+              width={32}
+              height={32}
             />
           </div>
           <h3
@@ -95,9 +95,6 @@ export default function PajecitosSection() {
           </div>
         </div>
       </div>
-
-      {/* Elemento decorativo inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#e8b4a0] to-transparent opacity-50" />
     </section>
-  )
+  );
 }
