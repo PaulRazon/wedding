@@ -6,6 +6,7 @@ import Image from "next/image";
 
 interface Sponsor {
   id: number;
+  sponsor: string;
   name: string;
   role: string;
   images: string[]; // Changed from single image to array
@@ -20,6 +21,7 @@ export default function WeddingSponsors() {
     {
       id: 9,
       name: "Padrinos de Velación",
+      sponsor:"Rosy Jara & Ángel Ramírez",
       role: "Velación",
       images: ["/velacion.jpeg", "/velacion2.jpeg"],
       description: "Luz y guía en nuestro camino juntos.",
@@ -27,6 +29,7 @@ export default function WeddingSponsors() {
     {
       id: 1,
       name: "Padrinos de Anillo",
+      sponsor:"Lulu Machain & Samuel López",
       role: "Anillos",
       images: ["/anillos.jpeg", "/anillos2.jpeg"],
       description:
@@ -36,6 +39,7 @@ export default function WeddingSponsors() {
     {
       id: 2,
       name: "Padrinos de Lazo",
+      sponsor:"María Jara & Hugo Navarro",
       role: "Lazo",
       images: ["/lazo.jpeg", "/lazo2.jpeg"],
       description: "Su guía nos une en este lazo sagrado de amor y compromiso.",
@@ -43,6 +47,7 @@ export default function WeddingSponsors() {
     {
       id: 3,
       name: "Madrina de Arras",
+      sponsor:"Cuca Jara",
       role: "Arras",
       images: ["/arras.jpeg", "/arras2.jpeg"],
       description: "Su generosidad es el fundamento de nuestro nuevo hogar.",
@@ -50,6 +55,7 @@ export default function WeddingSponsors() {
     {
       id: 5,
       name: "Padrino de Biblia",
+      sponsor:"Chuy Jara",
       role: "Biblia",
       images: ["/biblia.jpeg", "/biblia2.jpeg"],
       description: "Su fe nos guía en este camino de bendición.",
@@ -57,6 +63,7 @@ export default function WeddingSponsors() {
     {
       id: 6,
       name: "Padrinos de Cojines",
+      sponsor:"Isabel López & Chendo Machain",
       role: "Cojines",
       images: ["/cojines.jpeg", "/cojines2.jpeg"],
       description: "Su apoyo es el soporte de nuestra unión.",
@@ -65,6 +72,7 @@ export default function WeddingSponsors() {
     {
       id: 4,
       name: "Padrinos de Ramo",
+      sponsor:"Andrea Pérez & Alex Ramírez",
       role: "Ramo",
       images: ["/ramo.jpeg", "/ramo2.jpeg"],
       description: "Su amor florece en cada pétalo de nuestro ramo nupcial.",
@@ -73,6 +81,7 @@ export default function WeddingSponsors() {
     {
       id: 8,
       name: "Madrina de Brindis",
+      sponsor:"Fer González",
       role: "Brindis",
       images: ["/brindis.jpeg", "/brindis2.jpeg"],
       description: "Su cariño será recordado en cada detalle.",
@@ -80,6 +89,7 @@ export default function WeddingSponsors() {
     {
       id: 7,
       name: "Padrino de Musica",
+      sponsor:"Carlos Razón",
       role: "Musica",
       images: ["/musica.jpeg", "/musica2.jpeg"],
       description: "Que su alegría sea el vino que celebre nuestro amor.",
@@ -88,6 +98,7 @@ export default function WeddingSponsors() {
     {
       id: 4,
       name: "Invitado Especial",
+      sponsor:"Fabito",
       role: "Cumpleañero",
       images: ["/cumpleanero.jpeg"],
       description: "Celebrando un año más de vida en nuestro día especial.",
@@ -243,6 +254,7 @@ export default function WeddingSponsors() {
                 >
                   {sponsor.name}
                 </h3>
+                <h4 className="habibi-regular text-[#8b7355] mb-4 italic">{sponsor.sponsor}</h4>
                 {sponsor.description && (
                   <p className="habibi-regular text-[#8b7355] text-sm leading-relaxed">
                     {sponsor.description}
