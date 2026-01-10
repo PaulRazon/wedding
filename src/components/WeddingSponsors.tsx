@@ -167,7 +167,7 @@ export default function WeddingSponsors() {
               <div className="relative h-78 bg-gradient-to-br from-[#f0f9fd] via-[#f5fbfd] to-[#a8d8f0]/20 overflow-hidden">
                 {sponsor.images? (
                   <Image
-                    src={sponsor.images[1]}
+                    src={sponsor.images[1] || sponsor.images[0]}
                     alt={sponsor.name}
                     fill
                     loading="lazy"
