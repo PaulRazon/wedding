@@ -24,7 +24,7 @@ export default function WeddingSponsors() {
       name: "Padrinos de Velación",
       sponsor: "Rosy Jara & Ángel Ramírez",
       role: "Velación",
-      images: ["/velacion.jpeg", "/velacion2.jpeg"],
+      images: ["/velacio2.jpeg", "/velacion.jpeg"],
       description: "Luz y guía en nuestro camino juntos.",
     },
     {
@@ -96,7 +96,7 @@ export default function WeddingSponsors() {
       name: "Invitado Especial",
       sponsor: "Fabito",
       role: "Cumpleañero",
-      images: ["/cumpleanero.jpeg"],
+      images: ["/cumpleanero.jpeg", "/cumpleanero.jpeg"],
       description: "Celebrando un año más de vida en nuestro día especial.",
     },
   ]
@@ -164,44 +164,17 @@ export default function WeddingSponsors() {
                 animationDelay: `${index * 100}ms`,
               }}
             >
-              <div className="relative h-58 md:h-50 bg-gradient-to-br from-[#f0f9fd] via-[#f5fbfd] to-[#a8d8f0]/20 overflow-hidden">
-                {sponsor.images && sponsor.images.length > 0 ? (
-                  <div className="flex h-full w-full gap-1">
-                    {sponsor.images.length === 1 ? (
-                      <div key={0} className="w-full h-full">
-                        <Image
-                          src={sponsor.images[0] || "/placeholder.svg"}
-                          alt={`${sponsor.name} 1`}
-                          fill
-                          loading="lazy"
-                          quality={80}
-                          className="object-cover h-full transition-transform duration-500"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement
-                            target.style.display = "none"
-                          }}
-                        />
-                      </div>
-                    ) : (
-                      sponsor.images.slice(0, 2).map((image, imgIndex) => (
-                        <div key={imgIndex} className="relative flex-1 h-full">
-                          <Image
-                            src={image || "/placeholder.svg"}
-                            alt={`${sponsor.name} ${imgIndex + 1}`}
-                            height={180}
-                            width={180}
-                            loading="lazy"
-                            quality={80}
-                            className="w-full object-contains h-full md:object-cover transition-transform duration-500"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement
-                              target.style.display = "none"
-                            }}
-                          />
-                        </div>
-                      ))
-                    )}
-                  </div>
+              <div className="relative h-78 bg-gradient-to-br from-[#f0f9fd] via-[#f5fbfd] to-[#a8d8f0]/20 overflow-hidden">
+                {sponsor.images? (
+                  <Image
+                    src={sponsor.images[1]}
+                    alt={sponsor.name}
+                    fill
+                    loading="lazy"
+                    quality={80}
+                    className=""
+                    
+                  />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <Users className="h-16 w-16 text-[#a8d8f0]/40" />

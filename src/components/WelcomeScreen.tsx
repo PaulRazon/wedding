@@ -156,45 +156,72 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
           <p className="text-lg md:text-xl text-white/90 font-light">
             Nos casamos
           </p>
-          <div className="w-60 h-[2px] bg-white/50 mx-auto my-6"></div>
+          <div className="w-full flex justify-center gap-3 mx-auto mt-4">
+            <Image
+              src={"/erizos3.jpeg"}
+              alt="Logo"
+              width={160}
+              height={160}
+              className="bg-transparent mix-blend-multiply contrast-125 [clip-path:polygon(50%_0%,_93%_25%,_93%_75%,_50%_100%,_7%_75%,_7%_25%)]  pb-8 object-cover px-7"
+            />
+            {/* <Image
+              src={"/erizo.png"}
+              alt="Logo"
+              width={60}
+              height={60}
+              className="object-contain"
+            /> */}
+          </div>
           <p className="text-white/80 text-sm md:text-base">
             11 de Abril, 2026
           </p>
         </div>
 
         {/* Content Card with backdrop */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:px-12 md:py-6 shadow-2xl w-full max-w-xl mx-auto">
+        <div className="rounded-3xl p-6 sm:p-8 md:px-12 md:py-6 w-full max-w-xl mx-auto">
           <button
             onClick={handleOpenInvitation}
             disabled={isOpening}
-            className={`group relative overflow-hidden 
-                      text-gray-800 px-8 py-3 sm:px-10 sm:py-4 rounded-full 
-                      font-bold text-xs sm:text-sm md:text-base
-                      transition-all duration-300 transform hover:scale-105 shadow-xl
-                      border-2 border-white/30 hover:border-white/50
-                      bg-white/90 hover:bg-white
-                      ${isOpening ? 'cursor-not-allowed' : ''}
-                      focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2`}
+            className={`group relative overflow-hidden
+                      px-9 py-3 sm:px-12 sm:py-4 rounded-full
+                      font-semibold tracking-wide text-xs sm:text-sm md:text-base
+                      text-gray-900
+                      transition-all duration-300 transform hover:scale-105
+                      shadow-lg hover:shadow-2xl
+                      border border-white/50 hover:border-white/80
+                      bg-gradient-to-r from-white/80 via-[#fdf7f2]/80 to-white/80
+                      backdrop-blur-xl
+                      ${isOpening ? 'cursor-wait opacity-80' : ''}
+                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/60`}
             aria-label={isOpening ? "Abriendo invitación..." : "Abrir invitación"}
           >
             <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
               {isOpening ? (
                 <>
-                  <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-gray-800 border-t-transparent rounded-full animate-spin"></span>
-                  <span>Abriendo...</span>
+                  <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-[#7ba3c8] border-t-transparent rounded-full animate-spin"></span>
+                  <span className="habibi-regular">Abriendo...</span>
                 </>
               ) : (
                 <>
-                  <Lock className="h-4 w-4 sm:h-6 sm:w-6 group-hover:animate-bounce transition-transform" />
-                  <span>¡CORAZÓN PALPITANTE, MANOS TEMBLOROSAS, ¡TOCA AQUÍ!</span>
+                 <span className="habibi-regular text-[0.7rem] sm:text-xs md:text-sm">
+                    ¡CORAZÓN PALPITANTE, MANOS TEMBLOROSAS, 
+                    <span className="text-[#8cc9e0] font-semibold"> ¡TOCA AQUÍ!</span>
+                  </span>
                 </>
               )}
             </span>
             
-            {/* Hover Effect */}
+            {/* Hover / background gradient overlay */}
             <span 
-              className="absolute inset-0 bg-gradient-to-r from-wedding-secondary/80 to-wedding-rose/80 
-                       opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0"
+              className="absolute inset-0 bg-gradient-to-r from-wedding-secondary/60 via-[#a8d8f0]/75 to-wedding-rose/75
+                       opacity-60 group-hover:opacity-100 transition-opacity duration-300 -z-0"
+              aria-hidden="true"
+            ></span>
+            {/* Soft glow ring */}
+            <span
+              className="pointer-events-none absolute -inset-[2px] rounded-full bg-gradient-to-r
+                         from-white/40 via-[#a8d8f0]/40 to-white/40 opacity-0
+                         group-hover:opacity-100 blur-md transition-opacity duration-300 -z-10"
               aria-hidden="true"
             ></span>
           </button>
