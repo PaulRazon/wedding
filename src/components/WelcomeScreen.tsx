@@ -163,7 +163,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
         </div>
 
         {/* Content Card with backdrop */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl w-full max-w-md mx-auto">
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:px-12 md:py-6 shadow-2xl w-full max-w-xl mx-auto">
           <button
             onClick={handleOpenInvitation}
             disabled={isOpening}

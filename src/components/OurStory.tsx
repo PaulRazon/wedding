@@ -35,16 +35,16 @@ export default function OurStory() {
       className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-[#f5f1eb] to-[#fef9f3] dark:from-[#2d2824] dark:to-[#3a3330]"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-1/4 w-64 h-64 bg-[#9dc3e6]/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-[#b8d8ea]/20 rounded-full blur-3xl animate-float-delayed"></div>
-        <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-[#7fb5d1]/10 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute top-20 right-1/4 w-64 h-64 bg-[#a8d8f0]/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-[#c5e3f5]/20 rounded-full blur-3xl animate-float-delayed"></div>
+        <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-[#8cc9e0]/10 rounded-full blur-2xl animate-pulse"></div>
 
         {/* Floating hearts decoration */}
-        <Heart className="absolute top-10 right-10 w-5 h-5 text-[#9dc3e6]/40 animate-pulse" />
-        <Heart className="absolute top-32 right-1/4 w-4 h-4 text-[#b8d8ea]/30 animate-bounce-slow" />
-        <Heart className="absolute bottom-32 left-10 w-4 h-4 text-[#b8d8ea]/40 animate-pulse" />
-        <Heart className="absolute bottom-1/3 right-20 w-3 h-3 text-[#9dc3e6]/30 animate-bounce-slow" />
-        <Heart className="absolute top-1/2 left-1/4 w-3 h-3 text-[#7fb5d1]/35 animate-pulse" />
+        <Heart className="absolute top-10 right-10 w-5 h-5 text-[#a8d8f0]/40 animate-pulse" />
+        <Heart className="absolute top-32 right-1/4 w-4 h-4 text-[#c5e3f5]/30 animate-bounce-slow" />
+        <Heart className="absolute bottom-32 left-10 w-4 h-4 text-[#c5e3f5]/40 animate-pulse" />
+        <Heart className="absolute bottom-1/3 right-20 w-3 h-3 text-[#a8d8f0]/30 animate-bounce-slow" />
+        <Heart className="absolute top-1/2 left-1/4 w-3 h-3 text-[#8cc9e0]/35 animate-pulse" />
       </div>
 
       <article className="max-w-5xl mx-auto relative z-10">
@@ -56,7 +56,7 @@ export default function OurStory() {
         >
           <div className="relative group">
             {/* Updated blur of background to pastel blue */}
-            <div className="absolute inset-0 bg-[#9dc3e6]/30 rounded-full blur-xl group-hover:bg-[#9dc3e6]/40 transition-all duration-500"></div>
+            <div className="absolute inset-0  transition-all duration-500"></div>
             <Image
               src="/logo-erizos.png"
               width={140}
@@ -75,9 +75,9 @@ export default function OurStory() {
         >
           {/* Changed decorators to pastel blue */}
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#9dc3e6] to-[#9dc3e6]"></div>
-            <Heart className="w-6 h-6 text-[#9dc3e6] fill-[#b8d8ea]/40 animate-pulse" />
-            <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#9dc3e6] to-[#9dc3e6]"></div>
+            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#a8d8f0] to-[#a8d8f0]"></div>
+            <Heart className="w-6 h-6 text-[#a8d8f0] fill-[#c5e3f5]/40 animate-pulse" />
+            <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#a8d8f0] to-[#a8d8f0]"></div>
           </div>
 
           <h2 className="great-vibes-regular text-6xl md:text-7xl font-light text-[#6b5d54] dark:text-[#e8dfd5] mb-10 tracking-wide drop-shadow-md">
@@ -94,16 +94,16 @@ export default function OurStory() {
           }`}
         >
           {/* Changed borders, shadows, and decorations to pastel blue */}
-          <div className="bg-[#fefbf8]/80 dark:bg-[#3a3330]/80 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-[#9dc3e6]/40 dark:border-[#7fb5d1]/40 shadow-2xl shadow-[#7fb5d1]/10 relative overflow-hidden">
+          <div className="bg-[#fefbf8]/80 dark:bg-[#3a3330]/80 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-[#a8d8f0]/40 dark:border-[#8cc9e0]/40 shadow-2xl shadow-[#8cc9e0]/10 relative overflow-hidden">
             {/* Decorative background elements */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-[#9dc3e6]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#b8d8ea]/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 right-0 w-40 h-40 bg-[#a8d8f0]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#c5e3f5]/10 rounded-full blur-3xl"></div>
 
             {/* Decorative Divider */}
             <div className="flex items-center justify-center mb-14 relative z-10">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#9dc3e6]"></div>
-              <BellRing className="h-7 w-7 mx-6 text-[#9dc3e6] animate-pulse drop-shadow-lg" />
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#9dc3e6]"></div>
+              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#a8d8f0]"></div>
+              <BellRing className="h-7 w-7 mx-6 text-[#a8d8f0] animate-pulse drop-shadow-lg" />
+              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#a8d8f0]"></div>
             </div>
 
             {/* Couple Grid with enhanced cards */}
@@ -111,10 +111,10 @@ export default function OurStory() {
               {/* Bride */}
               <div className="text-center group">
                 {/* Changed borders, shadows, and hover effects to pastel blue */}
-                <div className="mb-8 p-8 rounded-2xl bg-[#f5f1eb]/90 dark:bg-[#2d2824]/90 backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#9dc3e6]/20 group-hover:scale-105 group-hover:bg-[#f5f1eb] dark:group-hover:bg-[#2d2824] border border-[#9dc3e6]/20 dark:border-[#7fb5d1]/20">
+                <div className="mb-8 p-8 rounded-2xl bg-[#f5f1eb]/90 dark:bg-[#2d2824]/90 backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#a8d8f0]/20 group-hover:scale-105 group-hover:bg-[#f5f1eb] dark:group-hover:bg-[#2d2824] border border-[#a8d8f0]/20 dark:border-[#8cc9e0]/20">
                   <div className="mb-6 relative">
-                    <div className="absolute inset-0 bg-[#9dc3e6]/20 rounded-full blur-xl group-hover:bg-[#9dc3e6]/30 transition-all duration-500"></div>
-                    <Heart className="w-10 h-10 mx-auto text-[#9dc3e6] fill-[#b8d8ea]/40 relative z-10 group-hover:scale-110 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-[#a8d8f0]/20 rounded-full blur-xl group-hover:bg-[#a8d8f0]/30 transition-all duration-500"></div>
+                    <Heart className="w-10 h-10 mx-auto text-[#a8d8f0] fill-[#c5e3f5]/40 relative z-10 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="great-vibes-regular text-4xl md:text-5xl font-medium text-[#6b5d54] dark:text-[#e8dfd5] mb-8 leading-tight drop-shadow-sm">
                     Anahí Rosario
@@ -122,10 +122,10 @@ export default function OurStory() {
                     Pérez Jara
                   </h3>
                   <div className="space-y-4">
-                    <p className="habibi-regular text-xs uppercase tracking-widest text-[#5a8aad] dark:text-[#9dc3e6] font-semibold">
+                    <p className="habibi-regular text-xs uppercase tracking-widest text-[#7ba3c8] dark:text-[#a8d8f0] font-semibold">
                       Padres de la novia
                     </p>
-                    <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#9dc3e6] to-transparent mx-auto"></div>
+                    <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#a8d8f0] to-transparent mx-auto"></div>
                     <p className="habibi-regular text-base md:text-lg text-[#6b5d54] dark:text-[#d4c4b0] leading-relaxed font-medium">
                       Sra. Rosario Jara Pérez
                       <br />
@@ -138,10 +138,10 @@ export default function OurStory() {
               {/* Groom */}
               <div className="text-center group">
                 {/* Changed borders, shadows, and hover effects to pastel blue */}
-                <div className="mb-8 p-8 rounded-2xl bg-[#f5f1eb]/90 dark:bg-[#2d2824]/90 backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#b8d8ea]/20 group-hover:scale-105 group-hover:bg-[#f5f1eb] dark:group-hover:bg-[#2d2824] border border-[#b8d8ea]/20 dark:border-[#7fb5d1]/20">
+                <div className="mb-8 p-8 rounded-2xl bg-[#f5f1eb]/90 dark:bg-[#2d2824]/90 backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#c5e3f5]/20 group-hover:scale-105 group-hover:bg-[#f5f1eb] dark:group-hover:bg-[#2d2824] border border-[#c5e3f5]/20 dark:border-[#8cc9e0]/20">
                   <div className="mb-6 relative">
-                    <div className="absolute inset-0 bg-[#b8d8ea]/20 rounded-full blur-xl group-hover:bg-[#b8d8ea]/30 transition-all duration-500"></div>
-                    <Heart className="w-10 h-10 mx-auto text-[#b8d8ea] fill-[#b8d8ea]/40 relative z-10 group-hover:scale-110 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-[#c5e3f5]/20 rounded-full blur-xl group-hover:bg-[#c5e3f5]/30 transition-all duration-500"></div>
+                    <Heart className="w-10 h-10 mx-auto text-[#c5e3f5] fill-[#c5e3f5]/40 relative z-10 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="great-vibes-regular text-4xl md:text-5xl font-medium text-[#6b5d54] dark:text-[#e8dfd5] mb-8 leading-tight drop-shadow-sm">
                     Eduardo Bladimir
@@ -149,10 +149,10 @@ export default function OurStory() {
                     Razón Machain
                   </h3>
                   <div className="space-y-4">
-                    <p className="habibi-regular text-xs uppercase tracking-widest text-[#5a8aad] dark:text-[#9dc3e6] font-semibold">
+                    <p className="habibi-regular text-xs uppercase tracking-widest text-[#7ba3c8] dark:text-[#a8d8f0] font-semibold">
                       Padres del novio
                     </p>
-                    <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#b8d8ea] to-transparent mx-auto"></div>
+                    <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#c5e3f5] to-transparent mx-auto"></div>
                     <p className="habibi-regular text-base md:text-lg text-[#6b5d54] dark:text-[#d4c4b0] leading-relaxed font-medium">
                       Sra. Patricia Machain Carvajal
                       <br />

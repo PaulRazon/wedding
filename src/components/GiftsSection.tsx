@@ -41,16 +41,16 @@ export default function GiftsSection() {
           }`}
         >
           <div className="flex items-center justify-center mb-6">
-            <Gift className="h-4 w-4 mr-3" style={{ color: "#9dc3e6" }} />
-            <div className="w-12 h-px" style={{ background: "#9dc3e6" }}></div>
-            <Heart className="h-5 w-5 mx-3" style={{ color: "#9dc3e6" }} />
-            <div className="w-12 h-px" style={{ background: "#9dc3e6" }}></div>
-            <Gift className="h-4 w-4 ml-3" style={{ color: "#9dc3e6" }} />
+            <Gift className="h-4 w-4 mr-3" style={{ color: "#a8d8f0" }} />
+            <div className="w-12 h-px" style={{ background: "#a8d8f0" }}></div>
+            <Heart className="h-5 w-5 mx-3" style={{ color: "#a8d8f0" }} />
+            <div className="w-12 h-px" style={{ background: "#a8d8f0" }}></div>
+            <Gift className="h-4 w-4 ml-3" style={{ color: "#a8d8f0" }} />
           </div>
           <h2
             className="great-vibes-regular text-3xl md:text-4xl font-light mb-4 tracking-wide"
             style={{
-              background: "linear-gradient(135deg, #7fb5d1 0%, #9dc3e6 50%, #7fb5d1 100%)",
+              background: "linear-gradient(135deg, #8cc9e0 0%, #a8d8f0 50%, #8cc9e0 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               textShadow: "0 2px 8px rgba(127, 181, 209, 0.15)",
@@ -58,7 +58,7 @@ export default function GiftsSection() {
           >
             Regalos
           </h2>
-          <p className="habibi-regular text-lg" style={{ color: "#5a8aad" }}>
+          <p className="habibi-regular text-lg" style={{ color: "#7ba3c8" }}>
             Su presencia es nuestro mejor regalo
           </p>
         </div>
@@ -91,15 +91,15 @@ export default function GiftsSection() {
               <div
                 className="w-20 h-20 rounded-full flex items-center justify-center relative"
                 style={{
-                  background: "linear-gradient(135deg, #d4ebf2 0%, #b8d8ea 100%)",
+                  background: "linear-gradient(135deg, #ddf1f8 0%, #c5e3f5 100%)",
                   boxShadow: "0 4px 16px rgba(157, 195, 230, 0.25)",
                 }}
               >
-                <Gift className="h-10 w-10" style={{ color: "#7fb5d1" }} strokeWidth={1.5} />
+                <Gift className="h-10 w-10" style={{ color: "#8cc9e0" }} strokeWidth={1.5} />
               </div>
             </div>
 
-            <p className="habibi-regular text-lg mb-6 leading-relaxed" style={{ color: "#4a6b7c" }}>
+            <p className="habibi-regular text-lg mb-6 leading-relaxed" style={{ color: "#6b8fa3" }}>
               Su presencia en nuestro día especial es el mejor regalo que podríamos recibir. Sin embargo, si desean
               hacernos un obsequio, agradeceríamos mucho su apoyo en efectivo para nuestro futuro juntos.
             </p>
@@ -113,13 +113,13 @@ export default function GiftsSection() {
               }}
             >
               <div className="absolute top-2 right-2 opacity-20">
-                <Heart className="h-8 w-8" style={{ color: "#9dc3e6" }} />
+                <Heart className="h-8 w-8" style={{ color: "#a8d8f0" }} />
               </div>
               <div className="absolute bottom-2 left-2 opacity-20">
-                <Heart className="h-6 w-6" style={{ color: "#b8d8ea" }} />
+                <Heart className="h-6 w-6" style={{ color: "#c5e3f5" }} />
               </div>
 
-              <p className="habibi-regular text-sm relative z-10" style={{ color: "#5a8aad" }}>
+              <p className="habibi-regular text-sm relative z-10" style={{ color: "#7ba3c8" }}>
                 Usa tu creatividad y envuélvelo tu mismo. Podrás depositarlo dentro de la recepción.
               </p>
             </div>

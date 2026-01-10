@@ -96,16 +96,16 @@ export default function Navbar({ isMusicPlaying, toggleMusic }: Omit<NavbarProps
       <div className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden ${
         isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
       }`}>
-        <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-blue-200/50 dark:border-gray-700/50">
+        <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-[#a8d8f0]/40 dark:border-gray-700/50">
           <div className="px-4 pt-4 pb-6 space-y-2">
             {navItems.map((item, index) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-[#60a7e3] 
-                         dark:hover:text-[#63c2e2] transition-all duration-300 habibi-regular 
-                         font-medium text-lg rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800/50
+                className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-[#7ba3c8] 
+                         dark:hover:text-[#8cc9e0] transition-all duration-300 habibi-regular 
+                         font-medium text-lg rounded-lg hover:bg-[#e8f4fb] dark:hover:bg-gray-800/50
                          transform hover:translate-x-2"
                 style={{ 
                   animationDelay: `${index * 100}ms`,

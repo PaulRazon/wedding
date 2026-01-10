@@ -64,12 +64,12 @@ export default function Gallery() {
           }`}
         >
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#5a8aad] to-[#5a8aad]"></div>
-            <Camera className="w-6 h-6 text-[#5a8aad] animate-pulse" />
-            <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#5a8aad] to-[#5a8aad]"></div>
+            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#7ba3c8] to-[#7ba3c8]"></div>
+            <Camera className="w-6 h-6 text-[#7ba3c8] animate-pulse" />
+            <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#7ba3c8] to-[#7ba3c8]"></div>
           </div>
 
-          <h2 className="great-vibes-regular text-6xl md:text-7xl font-light text-[#5a8aad] mb-4 tracking-wide drop-shadow-md">
+          <h2 className="great-vibes-regular text-6xl md:text-7xl font-light text-[#7ba3c8] mb-4 tracking-wide drop-shadow-md">
             Galería
           </h2>
           <p className="habibi-regular text-lg text-[#a88872] max-w-2xl mx-auto">
@@ -87,7 +87,7 @@ export default function Gallery() {
             {shuffledImages.map((image) => (
               <div
                 key={image.id}
-                className={`relative group break-inside-avoid mb-4 md:mb-6 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#5a8aad]/30 ${image.aspect}`}
+                className={`relative group break-inside-avoid mb-4 md:mb-6 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#7ba3c8]/30 ${image.aspect}`}
               >
                 <Image
                   loading="lazy"
