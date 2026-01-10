@@ -64,7 +64,7 @@ export default function WeddingSponsors() {
       name: "Padrinos de Cojines",
       sponsor: "Isabel López & Chendo Machain",
       role: "Cojines",
-      images: ["/cojines.jpeg", "/cojines.jpeg"],
+      images: ["/coines.jpeg", "/coines.jpeg"],
       description: "Su apoyo es el soporte de nuestra unión.",
     },
     {
