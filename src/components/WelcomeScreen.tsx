@@ -156,7 +156,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
           <p className="text-lg md:text-xl text-white/90 font-light">
             Nos casamos
           </p>
-          <div className="w-24 h-1 bg-white/50 mx-auto my-6"></div>
+          <div className="w-60 h-[2px] bg-white/50 mx-auto my-6"></div>
           <p className="text-white/80 text-sm md:text-base">
             11 de Abril, 2026
           </p>
