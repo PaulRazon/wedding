@@ -12,7 +12,6 @@ const images = [
   { id: 4, src: "/resource-photo-10.jpg", aspect: "aspect-[5/4]" },
   { id: 5, src: "/resource-photo-11.jpg", aspect: "aspect-[3/4]" },
   { id: 6, src: "/resource-photo-12.jpg", aspect: "aspect-[4/5]" },
-  { id: 7, src: "/resource-photo-5.jpg", aspect: "aspect-[3/4]" },
   { id: 8, src: "/resource-photo-13.jpeg", aspect: "aspect-[4/3]" },
   { id: 9, src: "/resource-photo-14.jpeg", aspect: "aspect-square" },
   { id: 10, src: "/resource-photo-15.jpeg", aspect: "aspect-[5/4]" },
