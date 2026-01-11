@@ -32,7 +32,16 @@ export default function Ceremony() {
       id="ceremonia"
       className="py-20 px-4 dark:from-gray-900/80 dark:via-gray-800/80 dark:to-[#f5e6d3]/10 relative overflow-hidden"
       aria-labelledby="ceremony-heading"
+       style={{
+        backgroundImage: "url('/resource-photo-17.jpeg')",
+        backgroundSize: "contain",
+        backgroundRepeat: "repeat"
+      }}
+
     >
+
+      {/* layer black */}
+      <div className="absolute inset-0 bg-black/20"></div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#c5e3f5]/30 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#a8d8f0]/30 rounded-full blur-3xl animate-float-delayed"></div>
@@ -54,23 +63,23 @@ export default function Ceremony() {
           }`}
         >
           <div className="flex items-center justify-center mb-6" aria-hidden="true">
-            <Sparkles className="h-4 w-4 text-[#a8d8f0] dark:text-[#c5e3f5] mr-3 animate-pulse" />
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#a8d8f0] to-transparent"></div>
-            <Heart className="h-6 w-6 text-[#8cc9e0] dark:text-[#a8d8f0] mx-3 animate-bounce-slow" />
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#a8d8f0] to-transparent"></div>
+            <Sparkles className="h-4 w-4 text-white dark:text-[#c5e3f5] mr-3 animate-pulse" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
+            <Heart className="h-6 w-6 text-white dark:text-[#a8d8f0] mx-3 animate-bounce-slow" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
             <Sparkles
-              className="h-4 w-4 text-[#a8d8f0] dark:text-[#c5e3f5] ml-3 animate-pulse"
+              className="h-4 w-4 text-white dark:text-[#c5e3f5] ml-3 animate-pulse"
               style={{ animationDelay: "0.5s" }}
             />
           </div>
 
           <h2
             id="ceremony-heading"
-            className="great-vibes-regular pt-2 text-5xl md:text-6xl font-light bg-gradient-to-r from-[#7ba3c8] via-[#a8d8f0] to-[#c5e3f5] dark:from-[#a8d8f0] dark:via-[#c5e3f5] dark:to-[#d0ecf8] bg-clip-text text-transparent mb-4 tracking-wide drop-shadow-lg"
+            className="great-vibes-regular pt-2 text-5xl md:text-6xl font-light text-white mb-4 tracking-wide drop-shadow-lg"
           >
             Ceremonia Religiosa
           </h2>
-          <p className="habibi-regular text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="habibi-regular text-xl text-white max-w-2xl mx-auto">
             Dios está aquí y bendice nuestro amor en:
           </p>
         </header>

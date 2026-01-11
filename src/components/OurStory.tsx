@@ -32,19 +32,26 @@ export default function OurStory() {
     <section
       ref={sectionRef}
       id="historia"
+       style={{
+        backgroundImage: "url('/resource-photo-17.jpeg')",
+        backgroundSize: "contain",
+        backgroundRepeat: "repeat",
+      }}
       className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-[#f5f1eb] to-[#fef9f3] dark:from-[#2d2824] dark:to-[#3a3330]"
     >
+      {/* layer black */}
+      <div className="absolute inset-0 bg-black/20"></div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-1/4 w-64 h-64 bg-[#a8d8f0]/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-[#c5e3f5]/20 rounded-full blur-3xl animate-float-delayed"></div>
         <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-[#8cc9e0]/10 rounded-full blur-2xl animate-pulse"></div>
 
         {/* Floating hearts decoration */}
-        <Heart className="absolute top-10 right-10 w-5 h-5 text-[#a8d8f0]/40 animate-pulse" />
-        <Heart className="absolute top-32 right-1/4 w-4 h-4 text-[#c5e3f5]/30 animate-bounce-slow" />
-        <Heart className="absolute bottom-32 left-10 w-4 h-4 text-[#c5e3f5]/40 animate-pulse" />
-        <Heart className="absolute bottom-1/3 right-20 w-3 h-3 text-[#a8d8f0]/30 animate-bounce-slow" />
-        <Heart className="absolute top-1/2 left-1/4 w-3 h-3 text-[#8cc9e0]/35 animate-pulse" />
+        <Heart className="absolute top-10 right-10 w-5 h-5 text-white/40 animate-pulse" />
+        <Heart className="absolute top-32 right-1/4 w-4 h-4 text-white/30 animate-bounce-slow" />
+        <Heart className="absolute bottom-32 left-10 w-4 h-4 text-white/40 animate-pulse" />
+        <Heart className="absolute bottom-1/3 right-20 w-3 h-3 text-white/30 animate-bounce-slow" />
+        <Heart className="absolute top-1/2 left-1/4 w-3 h-3 text-white/35 animate-pulse" />
       </div>
 
       <article className="max-w-5xl mx-auto relative z-10">
@@ -56,13 +63,13 @@ export default function OurStory() {
         >
           <div className="relative group">
             {/* Updated blur of background to pastel blue */}
-            <div className="absolute inset-0  transition-all duration-500"></div>
+            <div className="absolute inset-0  bg-white rounded-full top-2 right-1 left-1 bottom-1 transition-all duration-500"></div>
             <Image
               src="/logo-erizos.png"
               width={140}
               height={140}
               alt="Logo"
-              className="w-28 h-28 md:w-36 md:h-36 drop-shadow-2xl relative z-10 transform group-hover:scale-110 transition-transform duration-500"
+              className=" w-28 h-28 md:w-36 md:h-36 drop-shadow-2xl relative z-10 transform group-hover:scale-110 transition-transform duration-500"
             />
           </div>
         </div>
@@ -76,11 +83,11 @@ export default function OurStory() {
           {/* Changed decorators to pastel blue */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#a8d8f0] to-[#a8d8f0]"></div>
-            <Heart className="w-6 h-6 text-[#a8d8f0] fill-[#c5e3f5]/40 animate-pulse" />
+            <Heart className="w-6 h-6 text-white fill-[#c5e3f5]/40 animate-pulse" />
             <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#a8d8f0] to-[#a8d8f0]"></div>
           </div>
 
-          <h2 className="great-vibes-regular text-6xl md:text-7xl font-light text-[#6b5d54] dark:text-[#e8dfd5] mb-10 tracking-wide drop-shadow-md">
+          <h2 className="great-vibes-regular text-6xl md:text-7xl font-light text-white dark:text-[#e8dfd5] mb-10 tracking-wide drop-shadow-md">
             Un amor bonito y eterno
           </h2>
 
@@ -102,7 +109,13 @@ export default function OurStory() {
             {/* Decorative Divider */}
             <div className="flex items-center justify-center mb-14 relative z-10">
               <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#a8d8f0]"></div>
-              <BellRing className="h-7 w-7 mx-6 text-[#a8d8f0] animate-pulse drop-shadow-lg" />
+              <Image
+                src="/erizo.png"
+                width={52}
+                height={52}
+                alt="Heart Decorator"
+                className="mx-4"
+              />
               <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#a8d8f0]"></div>
             </div>
 

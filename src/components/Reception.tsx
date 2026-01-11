@@ -31,10 +31,15 @@ export default function Reception() {
       ref={sectionRef}
       id="recepcion"
       className="py-16 px-4 relative overflow-hidden"
-      
+       style={{
+        backgroundImage: "url('/resource-photo-17.jpeg')",
+        backgroundSize: "contain",
+        backgroundRepeat: "repeat",
+      }}
     >
  
-
+{/* layer black */}
+      <div className="absolute inset-0 bg-black/20"></div>
       <HedgehogDecoration position="bottom-left" size="medium" variant={1} className="hidden lg:block" />
 
       <div className="max-w-4xl mx-auto relative z-10">
@@ -45,24 +50,19 @@ export default function Reception() {
           }`}
         >
           <div className="flex items-center justify-center mb-6">
-            <PartyPopper className="h-4 w-4 mr-3" style={{ color: "#a8d8f0" }} />
-            <div className="w-12 h-px" style={{ background: "#a8d8f0" }}></div>
-            <Sparkles className="h-5 w-5 mx-3" style={{ color: "#a8d8f0" }} />
-            <div className="w-12 h-px" style={{ background: "#a8d8f0" }}></div>
-            <PartyPopper className="h-4 w-4 ml-3" style={{ color: "#a8d8f0" }} />
+            <PartyPopper className="h-4 w-4 mr-3" style={{ color: "white" }} />
+            <div className="w-12 h-px" style={{ background: "white" }}></div>
+            <Sparkles className="h-5 w-5 mx-3" style={{ color: "white" }} />
+            <div className="w-12 h-px" style={{ background: "white" }}></div>
+            <PartyPopper className="h-4 w-4 ml-3" style={{ color: "white" }} />
           </div>
           <h2
-            className="great-vibes-regular text-3xl md:text-4xl font-light mb-4 tracking-wide"
-            style={{
-              background: "linear-gradient(135deg, #8cc9e0 0%, #a8d8f0 50%, #8cc9e0 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              textShadow: "0 2px 8px rgba(127, 181, 209, 0.15)",
-            }}
+            className="great-vibes-regular text-3xl md:text-4xl font-light mb-4 text-white"
+            
           >
             Recepción
           </h2>
-          <p className="habibi-regular text-lg" style={{ color: "#7ba3c8" }}>
+          <p className="habibi-regular text-lg" style={{ color: "white" }}>
             Celebremos juntos
           </p>
         </div>

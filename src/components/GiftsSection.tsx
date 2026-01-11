@@ -1,38 +1,42 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { Gift, Heart } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import { Gift, Heart } from "lucide-react";
 
 export default function GiftsSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.3 },
-    )
+      { threshold: 0.3 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
       ref={sectionRef}
       id="regalos"
       className="py-16 px-4 relative overflow-hidden"
-    
+      style={{
+        backgroundImage: "url('/resource-photo-17.jpeg')",
+        backgroundSize: "contain",
+        backgroundRepeat: "repeat",
+      }}
     >
-  
-
+      {/* layer black */}
+      <div className="absolute inset-0 bg-black/20"></div>
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Title */}
         <div
@@ -41,24 +45,19 @@ export default function GiftsSection() {
           }`}
         >
           <div className="flex items-center justify-center mb-6">
-            <Gift className="h-4 w-4 mr-3" style={{ color: "#a8d8f0" }} />
-            <div className="w-12 h-px" style={{ background: "#a8d8f0" }}></div>
-            <Heart className="h-5 w-5 mx-3" style={{ color: "#a8d8f0" }} />
-            <div className="w-12 h-px" style={{ background: "#a8d8f0" }}></div>
-            <Gift className="h-4 w-4 ml-3" style={{ color: "#a8d8f0" }} />
+            <Gift className="h-4 w-4 mr-3" style={{ color: "white" }} />
+            <div className="w-12 h-px" style={{ background: "white" }}></div>
+            <Heart className="h-5 w-5 mx-3" style={{ color: "white" }} />
+            <div className="w-12 h-px" style={{ background: "white" }}></div>
+            <Gift className="h-4 w-4 ml-3" style={{ color: "white" }} />
           </div>
           <h2
-            className="great-vibes-regular text-3xl md:text-4xl font-light mb-4 tracking-wide"
-            style={{
-              background: "linear-gradient(135deg, #8cc9e0 0%, #a8d8f0 50%, #8cc9e0 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              textShadow: "0 2px 8px rgba(127, 181, 209, 0.15)",
-            }}
+            className="great-vibes-regular text-3xl md:text-4xl font-light mb-4 text-white"
+           
           >
             Regalos
           </h2>
-          <p className="habibi-regular text-lg" style={{ color: "#7ba3c8" }}>
+          <p className="habibi-regular text-lg" style={{ color: "white" }}>
             Su presencia es nuestro mejor regalo
           </p>
         </div>
@@ -78,7 +77,8 @@ export default function GiftsSection() {
           <div
             className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             style={{
-              background: "radial-gradient(circle at top left, rgba(157, 195, 230, 0.1) 0%, transparent 60%)",
+              background:
+                "radial-gradient(circle at top left, rgba(157, 195, 230, 0.1) 0%, transparent 60%)",
             }}
           />
 
@@ -86,28 +86,42 @@ export default function GiftsSection() {
             <div className="relative inline-flex items-center justify-center mb-6">
               <div
                 className="absolute inset-0 rounded-full animate-pulse"
-                style={{ background: "radial-gradient(circle, rgba(157, 195, 230, 0.3) 0%, transparent 70%)" }}
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(157, 195, 230, 0.3) 0%, transparent 70%)",
+                }}
               />
               <div
                 className="w-20 h-20 rounded-full flex items-center justify-center relative"
                 style={{
-                  background: "linear-gradient(135deg, #ddf1f8 0%, #c5e3f5 100%)",
+                  background:
+                    "linear-gradient(135deg, #ddf1f8 0%, #c5e3f5 100%)",
                   boxShadow: "0 4px 16px rgba(157, 195, 230, 0.25)",
                 }}
               >
-                <Gift className="h-10 w-10" style={{ color: "#8cc9e0" }} strokeWidth={1.5} />
+                <Gift
+                  className="h-10 w-10"
+                  style={{ color: "#8cc9e0" }}
+                  strokeWidth={1.5}
+                />
               </div>
             </div>
 
-            <p className="habibi-regular text-lg mb-6 leading-relaxed" style={{ color: "#6b8fa3" }}>
-              Su presencia en nuestro día especial es el mejor regalo que podríamos recibir. Sin embargo, si desean
-              hacernos un obsequio, agradeceríamos mucho su apoyo en efectivo para nuestro futuro juntos.
+            <p
+              className="habibi-regular text-lg mb-6 leading-relaxed"
+              style={{ color: "#6b8fa3" }}
+            >
+              Su presencia en nuestro día especial es el mejor regalo que
+              podríamos recibir. Sin embargo, si desean hacernos un obsequio,
+              agradeceríamos mucho su apoyo en efectivo para nuestro futuro
+              juntos.
             </p>
 
             <div
               className="mt-8 p-6 rounded-xl relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, rgba(212, 235, 242, 0.4) 0%, rgba(184, 216, 234, 0.4) 100%)",
+                background:
+                  "linear-gradient(135deg, rgba(212, 235, 242, 0.4) 0%, rgba(184, 216, 234, 0.4) 100%)",
                 border: "2px solid rgba(157, 195, 230, 0.3)",
                 boxShadow: "0 4px 16px rgba(157, 195, 230, 0.1)",
               }}
@@ -119,13 +133,17 @@ export default function GiftsSection() {
                 <Heart className="h-6 w-6" style={{ color: "#c5e3f5" }} />
               </div>
 
-              <p className="habibi-regular text-sm relative z-10" style={{ color: "#7ba3c8" }}>
-                Usa tu creatividad y envuélvelo tu mismo. Podrás depositarlo dentro de la recepción.
+              <p
+                className="habibi-regular text-sm relative z-10"
+                style={{ color: "#7ba3c8" }}
+              >
+                Usa tu creatividad y envuélvelo tu mismo. Podrás depositarlo
+                dentro de la recepción.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
