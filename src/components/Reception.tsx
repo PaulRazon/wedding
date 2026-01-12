@@ -111,7 +111,7 @@ export default function Reception() {
                 >
                   <Clock className="h-5 w-5" style={{ color: "#a8d8f0" }} />
                 </div>
-                <span className="habibi-regular text-lg" style={{ color: "#6b8fa3" }}>
+                <span className="habibi-regular md:text-lg text-left truncate text-sm" style={{ color: "#6b8fa3" }}>
                   5:30 PM
                 </span>
               </div>
@@ -123,19 +123,19 @@ export default function Reception() {
                 >
                   <MapPin className="h-5 w-5" style={{ color: "#a8d8f0" }} />
                 </div>
-                <span className="habibi-regular text-lg" style={{ color: "#6b8fa3" }}>
+                <span className="habibi-regular md:text-lg text-left truncate text-sm" style={{ color: "#6b8fa3" }}>
                   La Muralla Jardín Campestre
                 </span>
               </div>
 
-              <div className="flex items-center justify-center gap-4 group/item hover:scale-105 transition-transform duration-300">
+              <div className="flex items-center justify-start gap-4 group/item hover:scale-105 transition-transform duration-300">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center"
                   style={{ background: "linear-gradient(135deg, #ddf1f8 0%, #c5e3f5 100%)" }}
                 >
                   <Music className="h-5 w-5" style={{ color: "#a8d8f0" }} />
                 </div>
-                <span className="habibi-regular text-lg" style={{ color: "#6b8fa3" }}>
+                <span className="habibi-regular md:text-lg text-left truncate text-sm" style={{ color: "#6b8fa3" }}>
                   Música, baile y celebración
                 </span>
               </div>
