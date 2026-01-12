@@ -1,28 +1,9 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import { Ban, Clock, Camera, Sparkles, Heart } from "lucide-react"
 
 export default function DressCode() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.3 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const isVisible = true
 
   const suggestedColors = [
     { name: "Amarillo", color: "#cfc272", textColor: "#744210" },
@@ -35,7 +16,6 @@ export default function DressCode() {
 
   return (
     <section
-      ref={sectionRef}
       id="vestimenta"
       className="py-20 px-4 bg-[#eae4cc]  relative overflow-hidden"
     >
