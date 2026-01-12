@@ -123,30 +123,32 @@ export default function WeddingSponsors() {
       ref={sectionRef}
       id="padrinos"
       className="py-16 px-4 relative overflow-hidden"
-       style={{
-        backgroundImage: "url('/resource-photo-17.jpeg')",
-        backgroundRepeat: "repeat",
-      }}
+      
     >
-      {/* layer black */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-12 transition-all duration-1000 animate-fade-in-up opacity-100`}>
           <div className="flex items-center justify-center mb-6">
-            <Heart className="h-4 w-4 text-white mr-3" />
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
-            <Sparkles className="h-5 w-5 text-white mx-3 animate-pulse" />
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
-            <Heart className="h-4 w-4 text-white ml-3" />
+            <Heart className="h-4 w-4 text-[#a8d8f0] mr-3" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#a8d8f0] to-transparent"></div>
+            <Sparkles className="h-5 w-5 text-[#8cc9e0] mx-3 animate-pulse" />
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#a8d8f0] to-transparent"></div>
+            <Heart className="h-4 w-4 text-[#a8d8f0] ml-3" />
           </div>
           <h2
-            className="great-vibes-regular pt-3 text-4xl md:text-5xl font-light mb-4 text-white "
-            
+            className="great-vibes-regular pt-3 text-4xl md:text-5xl font-light mb-4 tracking-wide"
+            style={{
+              background: "linear-gradient(135deg, #8cc9e0 0%, #a8d8f0 50%, #7ba3c8 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              textShadow: "0 2px 4px rgba(157, 195, 230, 0.1)",
+            }}
           >
             Nuestros Padrinos
           </h2>
-          <p className="habibi-regular text-lg text-white">
+          <p className="habibi-regular text-lg text-[#7ba3c8]">
             Personas especiales que nos acompañan en este día tan importante
           </p>
         </div>
