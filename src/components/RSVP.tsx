@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react"
 import { MessageCircle, Send, Heart, Mail } from "lucide-react"
 import HedgehogDecoration from "./HedgehogDecoration"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"
+import Image from "next/image"
 
 export default function RSVP() {
   const [isVisible, setIsVisible] = useState(false)
@@ -84,7 +85,22 @@ Detalles del evento:
         backgroundRepeat: "repeat",
       }}
     >
-      
+      <Image
+        src={"/8.png"}
+        alt="Decoración floral"
+        width={200}
+        height={200}
+        sizes="(max-width: 768px) 112px, 200px"
+        className="absolute -top-4 right-4 w-24 md:w-40 h-auto opacity-70"
+      />
+      <Image
+        src={"/9.png"}
+        alt="Decoración floral"
+        width={180}
+        height={180}
+        sizes="(max-width: 768px) 96px, 180px"
+        className="absolute bottom-0 left-4 w-28 md:w-44 h-auto opacity-70" 
+        />
 {/* layer black */}
       <div className="absolute inset-0 bg-black/20"></div>
       <HedgehogDecoration position="bottom-right" size="medium" variant={1} className="hidden lg:block" />

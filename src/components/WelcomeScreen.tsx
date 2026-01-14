@@ -205,7 +205,7 @@ export default function WelcomeScreen({ onOpenInvitation }: WelcomeScreenProps) 
                 <>
                  <span className="habibi-regular text-[0.7rem] sm:text-xs md:text-sm">
                     ¡CORAZÓN PALPITANTE, MANOS TEMBLOROSAS, 
-                    <span className="text-[#8cc9e0] font-semibold"> ¡TOCA AQUÍ!</span>
+                    <span className="text-[#337891] font-semibold"> ¡TOCA AQUÍ!</span>
                   </span>
                 </>
               )}
