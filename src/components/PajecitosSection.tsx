@@ -59,9 +59,9 @@ export default function PajecitosSection() {
 
         {/* Divisor decorativo */}
         <div className="flex items-center justify-center my-10">
-          <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#c19a7f] to-transparent" />
-          <div className="mx-4 w-2 h-2 rounded-full bg-[#e8b4a0]" />
-          <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#c19a7f] to-transparent" />
+          <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#8b7355] to-transparent" />
+          <div className="mx-4 w-2 h-2 rounded-full bg-[#8b7355]" />
+          <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#8b7355] to-transparent" />
         </div>
 
         {/* Pajes */}
@@ -88,9 +88,9 @@ export default function PajecitosSection() {
 
         {/* Divisor decorativo */}
         <div className="flex items-center justify-center my-10">
-          <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#c19a7f] to-transparent" />
-          <div className="mx-4 w-2 h-2 rounded-full bg-[#e8b4a0]" />
-          <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#c19a7f] to-transparent" />
+          <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#8b7355] to-transparent" />
+          <div className="mx-4 w-2 h-2 rounded-full bg-[#8b7355]" />
+          <div className="h-px w-20 bg-gradient-to-r from-transparent via-[#8b7355] to-transparent" />
         </div>
 
         {/* Embajadores erizo */}
