@@ -50,6 +50,25 @@ export default function PhotoSection({
       ref={sectionRef}
       className="relative py-8 md:py-16 overflow-hidden bg-[#eae4cc]"
     >
+      {/* Figuras decorativas florales */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <Image
+          src="/9.png"
+          alt="Decoración floral"
+          width={180}
+          height={180}
+          sizes="(max-width: 768px) 96px, 180px"
+          className="absolute -top-4 right-4 w-24 md:w-40 h-auto opacity-60"
+        />
+        <Image
+          src="/10.png"
+          alt="Decoración floral"
+          width={200}
+          height={200}
+          sizes="(max-width: 768px) 112px, 200px"
+          className="absolute bottom-0 left-4 w-28 md:w-44 h-auto opacity-60"
+        />
+      </div>
       {/* Mobile: Optimized Image */}
       <div className="md:hidden relative h-96 mx-4 rounded-lg overflow-hidden">
         {imageUrl.includes('couple-photo') ? (

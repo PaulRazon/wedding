@@ -1,6 +1,7 @@
 "use client";
 
 import { Heart } from "lucide-react";
+import Image from "next/image";
 
 export default function LoveQuote() {
   return (
@@ -10,6 +11,24 @@ export default function LoveQuote() {
         <div className="absolute top-10 left-10 w-32 h-32 bg-[#f8e8d8] rounded-full opacity-20 blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#e8d5c4] rounded-full opacity-20 blur-3xl animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-[#f5e6d3] rounded-full opacity-30 blur-2xl animate-pulse delay-500" />
+
+        {/* Figuras decorativas florales */}
+        <Image
+          src="/1.png"
+          alt="Decoración floral"
+          width={180}
+          height={180}
+          sizes="(max-width: 768px) 96px, 180px"
+          className="absolute -top-4 right-6 w-24 md:w-40 h-auto opacity-70"
+        />
+        <Image
+          src="/2.png"
+          alt="Decoración floral"
+          width={200}
+          height={200}
+          sizes="(max-width: 768px) 112px, 200px"
+          className="absolute bottom-0 left-4 w-28 md:w-44 h-auto opacity-70"
+        />
       </div>
 
       {/* Flores decorativas flotantes */}

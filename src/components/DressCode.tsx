@@ -1,6 +1,7 @@
 "use client"
 
 import { Ban, Clock, Camera, Sparkles, Heart } from "lucide-react"
+import Image from "next/image"
 
 export default function DressCode() {
   const isVisible = true
@@ -23,6 +24,24 @@ export default function DressCode() {
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#c5e3f5]/30 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#a8d8f0]/30 rounded-full blur-3xl animate-float-delayed"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-[#d0ecf8]/40 rounded-full blur-2xl animate-bounce-slow"></div>
+
+        {/* Figuras decorativas florales */}
+        <Image
+          src="/5.png"
+          alt="Decoración floral"
+          width={180}
+          height={180}
+          sizes="(max-width: 768px) 96px, 180px"
+          className="absolute -top-6 right-6 w-24 md:w-40 h-auto opacity-70"
+        />
+        <Image
+          src="/6.png"
+          alt="Decoración floral"
+          width={200}
+          height={200}
+          sizes="(max-width: 768px) 112px, 200px"
+          className="absolute bottom-0 left-4 w-28 md:w-44 h-auto opacity-70"
+        />
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">

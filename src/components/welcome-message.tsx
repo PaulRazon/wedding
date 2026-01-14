@@ -1,6 +1,7 @@
 "use client"
 
 import { Sparkles, Gift, Wine, Church, Cake, Heart } from "lucide-react"
+import Image from "next/image"
 
 export default function WelcomeMessage() {
   return (
@@ -42,6 +43,24 @@ export default function WelcomeMessage() {
         <div className="absolute bottom-20 left-[10%] opacity-20 animate-float-slow">
           <Gift className="w-12 h-12 text-[#c19a7f]" />
         </div>
+
+        {/* Figuras decorativas florales */}
+        <Image
+          src="/3.png"
+          alt="Decoración floral"
+          width={180}
+          height={180}
+          sizes="(max-width: 768px) 96px, 180px"
+          className="absolute -top-6 right-4 w-24 md:w-40 h-auto opacity-70"
+        />
+        <Image
+          src="/4.png"
+          alt="Decoración floral"
+          width={200}
+          height={200}
+          sizes="(max-width: 768px) 112px, 200px"
+          className="absolute bottom-0 left-4 w-28 md:w-44 h-auto opacity-70"
+        />
       </div>
 
       {/* Contenido principal */}

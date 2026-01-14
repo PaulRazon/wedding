@@ -46,6 +46,24 @@ export default function OurStory() {
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-[#c5e3f5]/20 rounded-full blur-3xl animate-float-delayed"></div>
         <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-[#8cc9e0]/10 rounded-full blur-2xl animate-pulse"></div>
 
+        {/* Decorative floral figures */}
+        <Image
+          src="/1.png"
+          alt="Decoración floral"
+          width={180}
+          height={180}
+          sizes="(max-width: 768px) 96px, 180px"
+          className="absolute -top-6 left-3 w-24 md:w-40 h-auto opacity-70"
+        />
+        <Image
+          src="/2.png"
+          alt="Decoración floral"
+          width={200}
+          height={200}
+          sizes="(max-width: 768px) 112px, 200px"
+          className="absolute bottom-0 right-4 w-28 md:w-44 h-auto opacity-70"
+        />
+
         {/* Floating hearts decoration */}
         <Heart className="absolute top-10 right-10 w-5 h-5 text-white/40 animate-pulse" />
         <Heart className="absolute top-32 right-1/4 w-4 h-4 text-white/30 animate-bounce-slow" />

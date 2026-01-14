@@ -13,6 +13,26 @@ export default function PajecitosSection() {
         <div className="absolute top-1/2 right-1/4 w-24 h-24 rounded-full bg-[#c19a7f] blur-3xl animate-float-slow delay-2000" />
       </div>
 
+      {/* Figuras decorativas florales */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <Image
+          src="/1.png"
+          alt="Decoración floral"
+          width={180}
+          height={180}
+          sizes="(max-width: 768px) 96px, 180px"
+          className="absolute -top-4 right-4 w-24 md:w-40 h-auto opacity-70"
+        />
+        <Image
+          src="/2.png"
+          alt="Decoración floral"
+          width={200}
+          height={200}
+          sizes="(max-width: 768px) 112px, 200px"
+          className="absolute bottom-0 left-4 w-28 md:w-44 h-auto opacity-70"
+        />
+      </div>
+
       <div className="max-w-2xl mx-auto relative z-10">
         {/* Pajecitos */}
         <div className="mb-12 text-center">

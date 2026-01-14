@@ -64,6 +64,25 @@ export default function LoveStoryCard() {
 
   return (
     <section ref={sectionRef} className="py-16 px-4 bg-[#eae4cc] relative flex justify-center overflow-hidden">
+      {/* Figuras decorativas florales */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <Image
+          src="/7.png"
+          alt="Decoración floral"
+          width={180}
+          height={180}
+          sizes="(max-width: 768px) 96px, 180px"
+          className="absolute -top-4 left-4 w-24 md:w-40 h-auto opacity-70"
+        />
+        <Image
+          src="/8.png"
+          alt="Decoración floral"
+          width={200}
+          height={200}
+          sizes="(max-width: 768px) 112px, 200px"
+          className="absolute bottom-0 right-6 w-28 md:w-44 h-auto opacity-70"
+        />
+      </div>
       <button
         onClick={prevStory}
         className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white/80 hover:bg-white shadow-lg transition-all hover:scale-110"
