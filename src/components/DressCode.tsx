@@ -6,12 +6,12 @@ export default function DressCode() {
   const isVisible = true
 
   const suggestedColors = [
-    { name: "Amarillo", color: "#cfc272", textColor: "#744210" },
-    { name: "Verde", color: "#94d091", textColor: "#22543D" },
-    { name: "Rosa", color: "#e584c3", textColor: "#702459" },
-    { name: "Lila", color: "#d991fc", textColor: "#44337A" },
-    { name: "Naranja", color: "#e89d68", textColor: "#7B341E" },
-    { name: "Gris", color: "#718096", textColor: "#2D3748" },
+    { name: "Amarillo", color: "#f9e7a9", textColor: "#7b5a1a" },
+    { name: "Verde", color: "#cdefcc", textColor: "#2f5f3a" },
+    { name: "Rosa", color: "#f8c1d9", textColor: "#8a345a" },
+    { name: "Lila", color: "#e4c8f9", textColor: "#4a3474" },
+    { name: "Naranja", color: "#f9d1b0", textColor: "#844021" },
+    { name: "Gris", color: "#d3dde8", textColor: "#2d3748" },
   ]
 
   return (

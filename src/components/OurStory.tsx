@@ -82,9 +82,9 @@ export default function OurStory() {
         >
           {/* Changed decorators to pastel blue */}
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#a8d8f0] to-[#a8d8f0]"></div>
-            <Heart className="w-6 h-6 text-white fill-[#c5e3f5]/40 animate-pulse" />
-            <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#a8d8f0] to-[#a8d8f0]"></div>
+            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#7ba3c8] to-[#7ba3c8]"></div>
+            <Heart className="w-6 h-6 text-white/90 fill-[#b7d7eb]/35 animate-pulse" />
+            <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#7ba3c8] to-[#7ba3c8]"></div>
           </div>
 
           <h2 className="great-vibes-regular text-6xl md:text-7xl font-light text-white dark:text-[#e8dfd5] mb-10 tracking-wide drop-shadow-md">
@@ -124,10 +124,10 @@ export default function OurStory() {
               {/* Bride */}
               <div className="text-center group">
                 {/* Changed borders, shadows, and hover effects to pastel blue */}
-                <div className="mb-8 p-8 rounded-2xl bg-[#f5f1eb]/90 dark:bg-[#2d2824]/90 backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#a8d8f0]/20 group-hover:scale-105 group-hover:bg-[#f5f1eb] dark:group-hover:bg-[#2d2824] border border-[#a8d8f0]/20 dark:border-[#8cc9e0]/20">
+                <div className="mb-8 p-8 rounded-2xl bg-[#f5f1eb]/90 dark:bg-[#2d2824]/90 backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#7ba3c8]/20 group-hover:scale-105 group-hover:bg-[#f5f1eb] dark:group-hover:bg-[#2d2824] border border-[#7ba3c8]/20 dark:border-[#8cc9e0]/20">
                   <div className="mb-6 relative">
                     <div className="absolute inset-0 bg-[#a8d8f0]/20 rounded-full blur-xl group-hover:bg-[#a8d8f0]/30 transition-all duration-500"></div>
-                    <Heart className="w-10 h-10 mx-auto text-[#a8d8f0] fill-[#c5e3f5]/40 relative z-10 group-hover:scale-110 transition-transform duration-500" />
+                    <Heart className="w-10 h-10 mx-auto text-[#7ba3c8] fill-[#b7d7eb]/35 relative z-10 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="great-vibes-regular text-4xl md:text-5xl font-medium text-[#6b5d54] dark:text-[#e8dfd5] mb-8 leading-tight drop-shadow-sm">
                     Anahí Rosario
@@ -151,10 +151,10 @@ export default function OurStory() {
               {/* Groom */}
               <div className="text-center group">
                 {/* Changed borders, shadows, and hover effects to pastel blue */}
-                <div className="mb-8 p-8 rounded-2xl bg-[#f5f1eb]/90 dark:bg-[#2d2824]/90 backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#c5e3f5]/20 group-hover:scale-105 group-hover:bg-[#f5f1eb] dark:group-hover:bg-[#2d2824] border border-[#c5e3f5]/20 dark:border-[#8cc9e0]/20">
+                <div className="mb-8 p-8 rounded-2xl bg-[#f5f1eb]/90 dark:bg-[#2d2824]/90 backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#7ba3c8]/20 group-hover:scale-105 group-hover:bg-[#f5f1eb] dark:group-hover:bg-[#2d2824] border border-[#7ba3c8]/20 dark:border-[#8cc9e0]/20">
                   <div className="mb-6 relative">
                     <div className="absolute inset-0 bg-[#c5e3f5]/20 rounded-full blur-xl group-hover:bg-[#c5e3f5]/30 transition-all duration-500"></div>
-                    <Heart className="w-10 h-10 mx-auto text-[#c5e3f5] fill-[#c5e3f5]/40 relative z-10 group-hover:scale-110 transition-transform duration-500" />
+                    <Heart className="w-10 h-10 mx-auto text-[#7ba3c8] fill-[#b7d7eb]/35 relative z-10 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="great-vibes-regular text-4xl md:text-5xl font-medium text-[#6b5d54] dark:text-[#e8dfd5] mb-8 leading-tight drop-shadow-sm">
                     Eduardo Bladimir

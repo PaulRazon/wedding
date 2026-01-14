@@ -16,6 +16,12 @@ const images = [
   { id: 9, src: "/resource-photo-14.jpeg", aspect: "aspect-square" },
   { id: 10, src: "/resource-photo-15.jpeg", aspect: "aspect-[5/4]" },
   { id: 11, src: "/resource-photo-16.jpeg", aspect: "aspect-[4/5]" },
+  { id: 13, src: "/resource-photo-18.jpeg", aspect: "aspect-[4/3]" },
+  { id: 14, src: "/resource-photo-19.jpeg", aspect: "aspect-square" },
+  { id: 15, src: "/resource-photo-20.jpeg", aspect: "aspect-[5/4]" },
+  { id: 16, src: "/resource-photo-21.jpeg", aspect: "aspect-[4/5]" },
+  { id: 17, src: "/resource-photo-22.jpeg", aspect: "aspect-[3/4]" },
+  { id: 18, src: "/resource-photo-23.jpeg", aspect: "aspect-[4/3]" },
 ]
 
 // Shuffle the images for a more dynamic layout
@@ -76,7 +82,7 @@ export default function Gallery() {
             Galería
           </h2>
           <p className="habibi-regular text-lg text-[#a88872] max-w-2xl mx-auto">
-            Momentos especiales que hemos compartido juntos
+            Momentos de amor, mininos y naturaleza que atesoramos en el corazón.
           </p>
         </div>
 
